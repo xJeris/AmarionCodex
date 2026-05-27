@@ -20,6 +20,98 @@ namespace AmarionCodex.Data
         // Maps raw ZoneThisLootIsFrom -> canonical atlas zone name
         private static Dictionary<string, string> _zoneNameCache;
 
+        // Static fallback zone assignments for event-spawned / script-spawned NPCs
+        // whose prefabs have no LootTable.ZoneThisLootIsFrom and no SpawnPoints.
+        // Keys are normalized NPC names (lowercase, alphanumeric + whitespace).
+        // Values are canonical zone names matching ZoneMap values.
+        private static readonly Dictionary<string, string[]> PrefabZoneMap =
+            new Dictionary<string, string[]>
+            {
+                // Plane of Soluna
+                { "animation of faith",          new[] { "Plane of Soluna" } },
+                { "animation of grace",          new[] { "Plane of Soluna" } },
+                { "echo of grace",               new[] { "Plane of Soluna" } },
+                { "soluna",                      new[] { "Plane of Soluna" } },
+                { "solunarian moonkeeper",       new[] { "Plane of Soluna" } },
+                { "solunarian paladin",          new[] { "Plane of Soluna" } },
+                { "solunarian sunbringer",       new[] { "Plane of Soluna" } },
+                { "growing void",                new[] { "Plane of Soluna" } },
+
+                // Plane of Fernalla
+                { "fernallas guardian golem",    new[] { "Plane of Fernalla" } },
+                { "fernallan high guard",        new[] { "Plane of Fernalla" } },
+                { "fernallan high priest",       new[] { "Plane of Fernalla" } },
+                { "fernallan planar guard",      new[] { "Plane of Fernalla" } },
+                { "scorpling",                   new[] { "Plane of Fernalla" } },
+                { "xjeris",                      new[] { "Plane of Fernalla" } },
+                { "cluster of eggs",             new[] { "Plane of Fernalla" } },
+                { "arbor",                       new[] { "Plane of Fernalla" } },
+                { "ward of the forest",          new[] { "Plane of Fernalla" } },
+
+                // Plane of Brax
+                { "elementalist mizuki",         new[] { "Plane of Brax" } },
+                { "fiery remnant",               new[] { "Plane of Brax" } },
+                { "fire elemental",              new[] { "Plane of Brax" } },
+                { "greater fire elemental",      new[] { "Plane of Brax" } },
+                { "greater ice elemental",       new[] { "Plane of Brax" } },
+                { "ice elemental",               new[] { "Plane of Brax" } },
+                { "icy remnant",                 new[] { "Plane of Brax" } },
+                { "planar flame energy",         new[] { "Plane of Brax" } },
+                { "planar frost energy",         new[] { "Plane of Brax" } },
+
+                // Vitheo's Plane of Valor
+                { "tojokom",                     new[] { "Vitheo's Plane of Valor" } },
+                { "vithean executioner",         new[] { "Vitheo's Plane of Valor" } },
+                { "vitheo the tactician",        new[] { "Vitheo's Plane of Valor" } },
+                { "vitheo the tactician ",       new[] { "Vitheo's Plane of Valor" } }, // trailing space variant in game data
+                { "honsus",                      new[] { "Vitheo's Plane of Valor" } },
+                { "expert gladiator",            new[] { "Vitheo's Plane of Valor" } },
+                { "wandering gladiator",         new[] { "Vitheo's Plane of Valor" } },
+
+                // Other zones
+                { "pierson obero",               new[] { "Faerie's Brake" } },
+                { "pierson windwash",            new[] { "Port Azure" } },
+                { "spectral torturer",           new[] { "Lost Cellar" } },
+                { "a restless spirit",           new[] { "Island Tomb", "Willowwatch Ridge" } },
+
+                // DEFERRED — zone unknown or future content:
+                // "a golden spirit" (Lvl 6)
+                // "an angry spirit" (Lvl 1)
+                // "bazxzoth" (Lvl 38, BOSS)
+                // "undying light" (Lvl 25)
+                // "azynthi corruptor of gods" (Lvl 45, future mob)
+            };
+
+        // NPCs to exclude from the bestiary entirely (summoned pets, chests, future content, etc.)
+        // Keys are normalized NPC names.
+        private static readonly HashSet<string> ExcludedNpcs = new HashSet<string>
+        {
+            // Future content
+            "azynthi corruptor of gods",
+            // Summoned pets / companions
+            "summoned azynthian warhound",
+            "summoned dire wolf",
+            "summoned fallen warrior",
+            "summoned skeleton",
+            "summoned widow",
+            "summoned brute",
+            "summoned cursed fawn",
+            "summoned decayed fawn",
+            "summoned forest spirit",
+            "summoned pocket bank",
+            "summoned treant",
+            "summoned wretched fawn",
+            "loyal malaroth",
+            // Chests and interactables
+            "braxonian chest",
+            "solunarian chest",
+            "vithean chest",
+            "lost treasure",
+            // Misc non-bestiary entries
+            "townsperson",
+            "trick target",
+        };
+
         // Entries whose raw zone name lists multiple zones.
         // These entries should appear in ALL listed zones.
         private static readonly Dictionary<string, string[]> MultiZoneMap =
@@ -154,22 +246,51 @@ namespace AmarionCodex.Data
         /// <summary>
         /// Returns all canonical zone names for a given raw zone string.
         /// Multi-zone entries return multiple zones; single-zone entries return one.
+        /// Optionally accepts a normalized NPC name to check the static PrefabZoneMap
+        /// when the raw zone is empty.
         /// </summary>
-        public static List<string> GetCanonicalZones(string rawZone)
+        public static List<string> GetCanonicalZones(string rawZone, string normalizedNpcName = null)
         {
             var result = new List<string>();
-            if (string.IsNullOrEmpty(rawZone))
-                return result;
 
-            if (MultiZoneMap.TryGetValue(rawZone, out string[] zones))
+            if (!string.IsNullOrEmpty(rawZone))
             {
-                result.AddRange(zones);
+                if (MultiZoneMap.TryGetValue(rawZone, out string[] zones))
+                {
+                    result.AddRange(zones);
+                }
+                else
+                {
+                    result.Add(NormalizeZoneName(rawZone));
+                }
             }
-            else
+
+            // If the raw zone was empty (or produced no results), try the static map
+            if (result.Count == 0 && !string.IsNullOrEmpty(normalizedNpcName))
             {
-                result.Add(NormalizeZoneName(rawZone));
+                if (PrefabZoneMap.TryGetValue(normalizedNpcName, out string[] prefabZones))
+                    result.AddRange(prefabZones);
             }
+
             return result;
+        }
+
+        /// <summary>
+        /// Returns true if the given NPC (by normalized name) has a static
+        /// PrefabZoneMap entry for the specified zone.
+        /// </summary>
+        private static bool PrefabMapHasZone(string normalizedNpcName, string zoneName)
+        {
+            if (string.IsNullOrEmpty(normalizedNpcName))
+                return false;
+            if (!PrefabZoneMap.TryGetValue(normalizedNpcName, out string[] zones))
+                return false;
+            foreach (var z in zones)
+            {
+                if (z == zoneName)
+                    return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -226,6 +347,15 @@ namespace AmarionCodex.Data
             foreach (var zone in ZoneSpawnRegistry.GetAllZones())
                 zones.Add(zone);
 
+            // Include zones from the static prefab fallback map
+            foreach (var kvp in PrefabZoneMap)
+            {
+                if (ExcludedNpcs.Contains(kvp.Key))
+                    continue;
+                foreach (var z in kvp.Value)
+                    zones.Add(z);
+            }
+
             var list = new List<string>(zones);
             list.Sort();
             return list;
@@ -247,6 +377,10 @@ namespace AmarionCodex.Data
             var order = new List<string>();
             foreach (var entry in GameData.KnowledgeDatabase.GameKnowledge)
             {
+                if (string.IsNullOrEmpty(entry.NPCName))
+                    continue;
+                if (ExcludedNpcs.Contains(entry.NPCName))
+                    continue;
                 if (!EntryBelongsToZone(entry.NPCZoneName, zoneName))
                     continue;
 
@@ -256,6 +390,26 @@ namespace AmarionCodex.Data
                     existing.AddVariant(entry);
                 }
                 else
+                {
+                    byKey[dedupKey] = new BestiaryEntry(entry);
+                    order.Add(dedupKey);
+                }
+            }
+
+            // Add NPCs from the static PrefabZoneMap whose knowledge DB entry
+            // has no zone (or a different zone) but we know they belong here.
+            foreach (var entry in GameData.KnowledgeDatabase.GameKnowledge)
+            {
+                if (string.IsNullOrEmpty(entry.NPCName))
+                    continue;
+                if (ExcludedNpcs.Contains(entry.NPCName))
+                    continue;
+
+                string dedupKey = CollapseWhitespace(entry.NPCName);
+                if (byKey.ContainsKey(dedupKey))
+                    continue;
+
+                if (PrefabMapHasZone(entry.NPCName, zoneName))
                 {
                     byKey[dedupKey] = new BestiaryEntry(entry);
                     order.Add(dedupKey);
@@ -312,6 +466,10 @@ namespace AmarionCodex.Data
             discovered = 0;
             foreach (var entry in GameData.KnowledgeDatabase.GameKnowledge)
             {
+                if (string.IsNullOrEmpty(entry.NPCName))
+                    continue;
+                if (ExcludedNpcs.Contains(entry.NPCName))
+                    continue;
                 if (!EntryBelongsToZone(entry.NPCZoneName, zoneName))
                     continue;
 
@@ -322,6 +480,27 @@ namespace AmarionCodex.Data
                 total++;
                 if (EncounterTracker.IsDiscovered(entry.NPCName, zoneName))
                     discovered++;
+            }
+
+            // Count NPCs from the static PrefabZoneMap
+            foreach (var entry in GameData.KnowledgeDatabase.GameKnowledge)
+            {
+                if (string.IsNullOrEmpty(entry.NPCName))
+                    continue;
+                if (ExcludedNpcs.Contains(entry.NPCName))
+                    continue;
+
+                string dedupKey = CollapseWhitespace(entry.NPCName);
+                if (seen.Contains(dedupKey))
+                    continue;
+
+                if (PrefabMapHasZone(entry.NPCName, zoneName))
+                {
+                    seen.Add(dedupKey);
+                    total++;
+                    if (EncounterTracker.IsDiscovered(entry.NPCName, zoneName))
+                        discovered++;
+                }
             }
 
             // Count NPCs from the shared spawn registry not in the knowledge DB
@@ -359,6 +538,8 @@ namespace AmarionCodex.Data
             foreach (var entry in GameData.KnowledgeDatabase.GameKnowledge)
             {
                 if (string.IsNullOrEmpty(entry.NPCName))
+                    continue;
+                if (ExcludedNpcs.Contains(entry.NPCName))
                     continue;
 
                 // Only return discovered entries in search results
