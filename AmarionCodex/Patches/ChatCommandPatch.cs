@@ -36,7 +36,6 @@ namespace AmarionCodex.Patches
                 EncounterTracker.Save();
                 ZoneSpawnRegistry.Save();
                 BestiaryDataProvider.ClearCache();
-                Plugin.Log.LogInfo("Codex data reset.");
                 return false;
             }
 

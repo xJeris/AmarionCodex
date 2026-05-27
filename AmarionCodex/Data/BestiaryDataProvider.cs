@@ -146,8 +146,7 @@ namespace AmarionCodex.Data
                 return mapped;
             }
 
-            // Unknown zone — log so we can add it to the map
-            Plugin.Log.LogWarning($"Unmapped zone name: \"{rawZone}\"");
+            // Unknown zone — pass through as-is
             _zoneNameCache[rawZone] = rawZone;
             return rawZone;
         }
@@ -471,9 +470,8 @@ namespace AmarionCodex.Data
                         _displayNames[normalized] = entry.NPCName;
                 }
             }
-            catch (System.Exception ex)
+            catch (System.Exception)
             {
-                Plugin.Log.LogWarning($"Could not build display name lookup: {ex.Message}");
             }
         }
 

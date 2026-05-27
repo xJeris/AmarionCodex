@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using BepInEx;
 using UnityEngine;
 
 namespace AmarionCodex.Data
@@ -78,7 +77,6 @@ namespace AmarionCodex.Data
                 string key = MakeKey(normalizedNpcName, zone);
                 if (_discovered.Add(key))
                 {
-                    Plugin.Log.LogDebug($"Discovered: {normalizedNpcName} in {zone}");
                     anyNew = true;
                     OnNewDiscovery?.Invoke(key);
                 }
@@ -122,10 +120,7 @@ namespace AmarionCodex.Data
 
             string path = GetSavePath(slotIndex);
             if (!File.Exists(path))
-            {
-                Plugin.Log.LogInfo($"No save file found at {path}, starting fresh.");
                 return;
-            }
 
             try
             {
@@ -145,11 +140,9 @@ namespace AmarionCodex.Data
                     for (int i = 0; i < data.KillNames.Count; i++)
                         _killCounts[data.KillNames[i]] = data.KillValues[i];
                 }
-                Plugin.Log.LogInfo($"Loaded {_discovered.Count} discoveries and {_killCounts.Count} kill records for slot {slotIndex}.");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Plugin.Log.LogError($"Failed to load encounter data: {ex.Message}");
             }
         }
 
@@ -172,8 +165,6 @@ namespace AmarionCodex.Data
 
             if (oldKeys.Count == 0)
                 return;
-
-            Plugin.Log.LogInfo($"Migrating {oldKeys.Count} old discovery keys to per-zone format...");
 
             // Build a lookup: normalized NPC name -> set of canonical zones
             var npcZones = new Dictionary<string, HashSet<string>>();
@@ -202,7 +193,6 @@ namespace AmarionCodex.Data
                 }
             }
 
-            Plugin.Log.LogInfo($"Migration complete. Now {_discovered.Count} discovery keys.");
         }
 
         public static void Save()
@@ -235,9 +225,8 @@ namespace AmarionCodex.Data
                 string json = JsonUtility.ToJson(data, true);
                 File.WriteAllText(path, json);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Plugin.Log.LogError($"Failed to save encounter data: {ex.Message}");
             }
         }
 

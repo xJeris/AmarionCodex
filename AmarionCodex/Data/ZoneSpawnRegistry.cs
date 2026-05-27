@@ -39,7 +39,6 @@ namespace AmarionCodex.Data
             if (names.Add(normalizedNpcName))
             {
                 _dirty = true;
-                Plugin.Log.LogDebug($"ZoneSpawnRegistry: learned {normalizedNpcName} spawns in {canonicalZone}");
                 return true;
             }
             return false;
@@ -91,12 +90,10 @@ namespace AmarionCodex.Data
                         if (names.Count > 0)
                             _zoneNpcs[data.ZoneNames[i]] = names;
                     }
-                    Plugin.Log.LogInfo($"ZoneSpawnRegistry: loaded {_zoneNpcs.Count} zone mappings.");
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Plugin.Log.LogError($"Failed to load zone spawn registry: {ex.Message}");
             }
         }
 
@@ -127,9 +124,8 @@ namespace AmarionCodex.Data
                 File.WriteAllText(path, json);
                 _dirty = false;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Plugin.Log.LogError($"Failed to save zone spawn registry: {ex.Message}");
             }
         }
 

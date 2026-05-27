@@ -1,7 +1,6 @@
 using AmarionCodex.Data;
 using AmarionCodex.UI;
 using BepInEx;
-using BepInEx.Logging;
 using HarmonyLib;
 using UnityEngine;
 
@@ -15,7 +14,6 @@ namespace AmarionCodex
         public const string PluginVersion = "0.1.0";
 
         internal static Plugin Instance;
-        internal static ManualLogSource Log;
         internal static Harmony HarmonyInstance;
         internal static PluginConfig Cfg;
 
@@ -25,13 +23,10 @@ namespace AmarionCodex
         private void Awake()
         {
             Instance = this;
-            Log = Logger;
             Cfg = new PluginConfig(Config);
 
             HarmonyInstance = new Harmony(PluginGuid);
             HarmonyInstance.PatchAll(typeof(Plugin).Assembly);
-
-            Log.LogInfo($"{PluginName} v{PluginVersion} loaded.");
         }
 
         private void Update()
