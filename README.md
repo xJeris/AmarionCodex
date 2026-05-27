@@ -28,7 +28,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 
 ### Prerequisites
 
-- [.NET SDK 6.0+](https://dotnet.microsoft.com/download)
+- [.NET SDK](https://dotnet.microsoft.com/download) (with .NET Framework 4.7.2 targeting pack)
 - Erenshor installed (the build references game DLLs directly)
 
 ### Build
@@ -46,7 +46,7 @@ set ERENSHOR_DIR=C:\path\to\Erenshor
 dotnet build AmarionCodex/AmarionCodex.csproj
 ```
 
-The build defaults to Release configuration. Output goes to `AmarionCodex/bin/Release/netstandard2.1/AmarionCodex.dll`.
+The build defaults to Release configuration. Output goes to `AmarionCodex/bin/Release/net472/AmarionCodex.dll`.
 
 If Erenshor is detected, the DLL is also auto-deployed to `<Erenshor>/BepInEx/plugins/AmarionCodex/`.
 
