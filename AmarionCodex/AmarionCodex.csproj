@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>AmarionCodex</AssemblyName>
+    <Version>0.1.0</Version>
+    <LangVersion>latest</LangVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>AmarionCodex.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Set this to your Erenshor install directory, e.g.: -->
+    <!-- dotnet build -p:ErenshorDir="C:\Program Files (x86)\Steam\steamapps\common\Erenshor" -->
+    <!-- Auto-detection: checks ERENSHOR_DIR env var, then Playtest, then release -->
+    <ErenshorDir Condition="'$(ErenshorDir)' == ''">$(ERENSHOR_DIR)</ErenshorDir>
+    <ErenshorDir Condition="'$(ErenshorDir)' == '' AND Exists('C:\Program Files (x86)\Steam\steamapps\common\Erenshor Playtest\Erenshor_Data')">C:\Program Files (x86)\Steam\steamapps\common\Erenshor Playtest</ErenshorDir>
+    <ErenshorDir Condition="'$(ErenshorDir)' == '' AND Exists('C:\Program Files (x86)\Steam\steamapps\common\Erenshor\Erenshor_Data')">C:\Program Files (x86)\Steam\steamapps\common\Erenshor</ErenshorDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- BepInEx 5.4.x -->
+    <Reference Include="BepInEx">
+      <HintPath>$(ErenshorDir)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(ErenshorDir)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
+    <!-- Game assemblies -->
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(ErenshorDir)\Erenshor_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Auto-deploy to BepInEx/plugins/AmarionCodex/ on build -->
+  <Target Name="DeployPlugin" AfterTargets="Build" Condition="'$(ErenshorDir)' != ''">
+    <PropertyGroup>
+      <PluginDir>$(ErenshorDir)\BepInEx\plugins\AmarionCodex</PluginDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PluginDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginDir)" />
+  </Target>
+</Project>
