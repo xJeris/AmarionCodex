@@ -4,6 +4,7 @@
     <AssemblyName>AmarionCodex</AssemblyName>
     <Version>0.1.0</Version>
     <LangVersion>9.0</LangVersion>
+    <Deterministic>false</Deterministic>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>AmarionCodex.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
