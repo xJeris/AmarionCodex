@@ -8,7 +8,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 - Browse discovered entries organized by zone/dungeon
 - View NPC details: level, faction, loot tables, quest associations
 - Undiscovered entries shown as `???` placeholders with discovery count per zone
-- Open with keybind (default: F7) or chat commands (`/codex`, `/bestiary`)
+- Open with keybind (default: K) or chat commands (`/codex`, `/bestiary`)
 - Search across all discovered entries
 - Per-character save data, persisted alongside game saves
 
