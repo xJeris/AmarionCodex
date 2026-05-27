@@ -2,6 +2,8 @@
 
 An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampowered.com/app/2382520/Erenshor/). Tracks enemies and NPCs the player has encountered through combat, targeting, or interaction. Undiscovered entries show as question marks. Content is organized by game zone.
 
+![Codex Sample](sample.png)
+
 ## Features
 
 - Automatically tracks NPCs you target, consider, or kill
