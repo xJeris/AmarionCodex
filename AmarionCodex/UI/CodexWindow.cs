@@ -399,14 +399,49 @@ namespace AmarionCodex.UI
                 CreateLabel(padding.transform, "LootHeader", "Drops",
                     CodexStyles.DetailSectionFontSize, CodexStyles.TitleBarTop, FontStyles.Normal);
 
+                // Two-column layout for loot items
+                var lootColumns = new GameObject("LootColumns", typeof(RectTransform));
+                lootColumns.transform.SetParent(padding.transform, false);
+                var lootHL = lootColumns.AddComponent<HorizontalLayoutGroup>();
+                lootHL.spacing = 4;
+                lootHL.childForceExpandWidth = true;
+                lootHL.childForceExpandHeight = false;
+                lootHL.childControlWidth = true;
+                lootHL.childControlHeight = true;
+
+                var leftCol = new GameObject("LeftCol", typeof(RectTransform));
+                leftCol.transform.SetParent(lootColumns.transform, false);
+                var leftVL = leftCol.AddComponent<VerticalLayoutGroup>();
+                leftVL.childForceExpandWidth = true;
+                leftVL.childForceExpandHeight = false;
+                leftVL.childControlWidth = true;
+                leftVL.childControlHeight = true;
+                leftVL.spacing = 0;
+                var leftLE = leftCol.AddComponent<LayoutElement>();
+                leftLE.flexibleWidth = 1;
+
+                var rightCol = new GameObject("RightCol", typeof(RectTransform));
+                rightCol.transform.SetParent(lootColumns.transform, false);
+                var rightVL = rightCol.AddComponent<VerticalLayoutGroup>();
+                rightVL.childForceExpandWidth = true;
+                rightVL.childForceExpandHeight = false;
+                rightVL.childControlWidth = true;
+                rightVL.childControlHeight = true;
+                rightVL.spacing = 0;
+                var rightLE = rightCol.AddComponent<LayoutElement>();
+                rightLE.flexibleWidth = 1;
+
+                int lootIdx = 0;
                 foreach (var itemName in bestiary.Loot)
                 {
                     if (string.IsNullOrEmpty(itemName))
                         continue;
 
-                    CreateLabel(padding.transform, "Loot_" + itemName,
-                        $"  \u2022 {itemName}",
+                    var col = (lootIdx % 2 == 0) ? leftCol : rightCol;
+                    CreateLabel(col.transform, "Loot_" + itemName,
+                        $"\u2022 {itemName}",
                         CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal);
+                    lootIdx++;
                 }
             }
 
