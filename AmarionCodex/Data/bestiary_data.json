@@ -10210,11 +10210,14 @@
         },
         {
           "name": "Phantom's Ward",
-          "minLevel": 0,
-          "maxLevel": 0,
+          "normalizedName": "phantoms ward",
+          "minLevel": 25,
+          "maxLevel": 25,
           "isBoss": false,
           "loot": [],
-          "quests": []
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
