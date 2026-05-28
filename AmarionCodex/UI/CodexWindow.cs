@@ -35,6 +35,13 @@ namespace AmarionCodex.UI
         private bool _isSearchMode;
 
         /// <summary>
+        /// True when the search input field has focus (user is typing in it).
+        /// Used by Plugin.Update() to suppress the toggle keybind.
+        /// </summary>
+        public bool IsSearchFocused =>
+            SearchField != null && SearchField.isFocused;
+
+        /// <summary>
         /// Call after the builder has assigned all references.
         /// Wires up button and input listeners.
         /// </summary>

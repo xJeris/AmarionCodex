@@ -51,7 +51,7 @@ namespace AmarionCodex.UI
 
         // ── Layout Constants ──
         public const float WindowWidth    = 860f;
-        public const float WindowHeight   = 640f;
+        public const float WindowHeight   = 700f;
         public const float LeftPanelWidth = 215f;
         public const float TitleBarHeight = 32f;
         public const float StatusBarHeight = 22f;

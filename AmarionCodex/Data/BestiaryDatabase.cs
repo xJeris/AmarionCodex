@@ -307,6 +307,16 @@ namespace AmarionCodex.Data
         }
 
         /// <summary>
+        /// Returns true if the zone exists in the loaded bestiary data.
+        /// </summary>
+        public static bool HasZone(string zoneName)
+        {
+            if (!_loaded || string.IsNullOrEmpty(zoneName))
+                return false;
+            return _zoneIndex.ContainsKey(zoneName);
+        }
+
+        /// <summary>
         /// Returns zone metadata (level range, dungeon flag).
         /// </summary>
         public static ZoneData GetZoneInfo(string zoneName)

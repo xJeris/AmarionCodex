@@ -131,6 +131,8 @@ namespace AmarionCodex.Data
 
                     // Migrate old name-only keys to compound keys
                     MigrateOldKeys();
+                    // Re-map keys whose zone no longer exists in the data
+                    MigrateStaleZoneKeys();
                 }
                 if (data?.KillNames != null && data?.KillValues != null &&
                     data.KillNames.Count == data.KillValues.Count)
@@ -172,6 +174,47 @@ namespace AmarionCodex.Data
                 foreach (var zone in zones)
                     _discovered.Add(MakeKey(oldKey, zone));
             }
+        }
+
+        /// <summary>
+        /// Re-maps discovery keys whose zone part doesn't match any current zone
+        /// in the bestiary data. This handles zone renames/moves between versions
+        /// (e.g., NPCs moved to Plane of Fernalla, Dark Azynthi's Garden, etc.).
+        /// For each stale key, grants credit in all zones the NPC currently appears in.
+        /// </summary>
+        private static void MigrateStaleZoneKeys()
+        {
+            var staleKeys = new List<string>();
+            foreach (var key in _discovered)
+            {
+                int sep = key.IndexOf(KeySeparator);
+                if (sep < 0)
+                    continue;
+
+                string zone = key.Substring(sep + 1);
+                if (!BestiaryDatabase.HasZone(zone))
+                    staleKeys.Add(key);
+            }
+
+            if (staleKeys.Count == 0)
+                return;
+
+            int migrated = 0;
+            foreach (var staleKey in staleKeys)
+            {
+                _discovered.Remove(staleKey);
+                int sep = staleKey.IndexOf(KeySeparator);
+                string npcName = staleKey.Substring(0, sep);
+                var zones = BestiaryDatabase.GetZonesForNpc(npcName);
+                foreach (var zone in zones)
+                {
+                    if (_discovered.Add(MakeKey(npcName, zone)))
+                        migrated++;
+                }
+            }
+
+            if (migrated > 0)
+                Debug.Log($"[AmarionCodex] Migrated {staleKeys.Count} stale discovery keys -> {migrated} new keys");
         }
 
         public static void Save()

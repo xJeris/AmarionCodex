@@ -42,6 +42,10 @@ namespace AmarionCodex
             if (GameData.PlayerTyping)
                 return;
 
+            // Don't process keybind while typing in the codex search field
+            if (_codexWindow != null && _codexWindow.IsSearchFocused)
+                return;
+
             if (Input.GetKeyDown(Cfg.OpenCodexKey.Value))
                 ToggleCodexWindow();
         }
