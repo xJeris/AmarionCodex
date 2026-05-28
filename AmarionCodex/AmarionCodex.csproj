@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <AssemblyName>AmarionCodex</AssemblyName>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <LangVersion>9.0</LangVersion>
     <Deterministic>false</Deterministic>
     <SignAssembly>true</SignAssembly>
@@ -72,6 +72,16 @@
     </Reference>
   </ItemGroup>
 
+  <!-- Include bestiary_data.json as content to copy to output -->
+  <ItemGroup>
+    <Content Include="Data\bestiary_data.json" CopyToOutputDirectory="PreserveNewest" Link="bestiary_data.json" />
+  </ItemGroup>
+
+  <!-- Also embed the JSON as a fallback resource inside the DLL -->
+  <ItemGroup>
+    <EmbeddedResource Include="Data\bestiary_data.json" LogicalName="AmarionCodex.bestiary_data.json" />
+  </ItemGroup>
+
   <!-- Auto-deploy to BepInEx/plugins/AmarionCodex/ on build -->
   <Target Name="DeployPlugin" AfterTargets="Build" Condition="'$(ErenshorDir)' != ''">
     <PropertyGroup>
@@ -79,5 +89,6 @@
     </PropertyGroup>
     <MakeDir Directories="$(PluginDir)" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginDir)" />
+    <Copy SourceFiles="$(TargetDir)bestiary_data.json" DestinationFolder="$(PluginDir)" />
   </Target>
 </Project>

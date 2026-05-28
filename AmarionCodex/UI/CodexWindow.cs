@@ -57,13 +57,17 @@ namespace AmarionCodex.UI
         /// <summary>
         /// Called when a new NPC is discovered. Refreshes the current view
         /// so the player sees the update without navigating away.
+        /// Receives compound key "npcName|zone" from EncounterTracker.OnNewDiscovery.
         /// </summary>
-        private void OnNpcDiscovered(string normalizedName)
+        private void OnNpcDiscovered(string discoveryKey)
         {
             if (!WindowPanel.activeSelf)
                 return;
 
-            // Refresh the currently displayed zone/search view
+            // Update zone progress counts in the left panel
+            RebuildZoneList();
+
+            // Refresh the currently displayed view
             if (_isSearchMode)
                 OnSearchChanged(SearchField.text);
             else if (_selectedZone != null)
@@ -125,16 +129,16 @@ namespace AmarionCodex.UI
             le.minHeight = CodexStyles.ZoneRowHeight;
             le.flexibleWidth = 1;
 
-            // Layout
+            // Layout: horizontal with left (name+details) and right (count)
             var hl = go.AddComponent<HorizontalLayoutGroup>();
-            hl.padding = new RectOffset(12, 8, 4, 4);
+            hl.padding = new RectOffset(8, 6, 3, 3);
             hl.childAlignment = TextAnchor.MiddleCenter;
             hl.childForceExpandWidth = false;
             hl.childForceExpandHeight = false;
             hl.childControlWidth = true;
             hl.childControlHeight = true;
 
-            // Left side: zone name + level
+            // Left side: zone name (row 1) + level/dungeon (row 2)
             var leftContainer = new GameObject("LeftContainer", typeof(RectTransform));
             leftContainer.transform.SetParent(go.transform, false);
             var leftContainerLE = leftContainer.AddComponent<LayoutElement>();
@@ -146,22 +150,20 @@ namespace AmarionCodex.UI
             leftVL.childControlWidth = true;
             leftVL.spacing = 0;
 
-            // Zone name
+            // Row 1: Zone name only
             var nameText = CreateLabel(leftContainer.transform, "ZoneName", zoneName,
                 CodexStyles.ZoneNameFontSize, CodexStyles.InkDark, FontStyles.Bold);
             nameText.enableWordWrapping = true;
             nameText.overflowMode = TextOverflowModes.Overflow;
 
-            // Check for dungeon badge
+            // Row 2: Level range + dungeon badge
             var zoneInfo = BestiaryDataProvider.GetZoneInfo(zoneName);
-            if (zoneInfo != null && zoneInfo.Dungeon)
-                nameText.text = $"{zoneName} <color=#8B2323><size=9>DUNGEON</size></color>";
-
-            // Level range
-            string levelText = "";
-            if (zoneInfo != null)
-                levelText = $"Lv {zoneInfo.LevelRangeLow}-{zoneInfo.LevelRangeHigh}";
-            CreateLabel(leftContainer.transform, "LevelRange", levelText,
+            string detailText = "";
+            if (zoneInfo != null && !string.IsNullOrEmpty(zoneInfo.levelRange))
+                detailText = $"Lv {zoneInfo.levelRange}";
+            if (zoneInfo != null && zoneInfo.isDungeon)
+                detailText += (detailText.Length > 0 ? "  " : "") + "<color=#8B2323>DUNGEON</color>";
+            CreateLabel(leftContainer.transform, "ZoneDetails", detailText,
                 CodexStyles.ZoneLevelFontSize, CodexStyles.InkLight, FontStyles.Normal);
 
             // Right side: count badge
@@ -209,8 +211,8 @@ namespace AmarionCodex.UI
             // Update zone header
             var zoneInfo = BestiaryDataProvider.GetZoneInfo(zoneName);
             ZoneNameText.text = zoneName;
-            if (zoneInfo != null)
-                ZoneSubText.text = $"Levels {zoneInfo.LevelRangeLow} \u2013 {zoneInfo.LevelRangeHigh}";
+            if (zoneInfo != null && !string.IsNullOrEmpty(zoneInfo.levelRange))
+                ZoneSubText.text = $"Levels {zoneInfo.levelRange}";
             else
                 ZoneSubText.text = "";
 
@@ -231,8 +233,8 @@ namespace AmarionCodex.UI
             foreach (var bestiary in entries)
             {
                 bool discovered = zoneName != null
-                    ? EncounterTracker.IsDiscovered(bestiary.Entry.NPCName, zoneName)
-                    : EncounterTracker.IsDiscoveredAnywhere(bestiary.Entry.NPCName);
+                    ? EncounterTracker.IsDiscovered(bestiary.NormalizedName, zoneName)
+                    : EncounterTracker.IsDiscoveredAnywhere(bestiary.NormalizedName);
                 var row = CreateEntryRow(bestiary, discovered);
                 _entryRows.Add(row);
             }
@@ -240,8 +242,7 @@ namespace AmarionCodex.UI
 
         private GameObject CreateEntryRow(BestiaryEntry bestiary, bool discovered)
         {
-            var entry = bestiary.Entry;
-            var go = new GameObject("Entry_" + entry.NPCName, typeof(RectTransform), typeof(Image), typeof(Button));
+            var go = new GameObject("Entry_" + bestiary.NormalizedName, typeof(RectTransform), typeof(Image), typeof(Button));
             go.transform.SetParent(EntryScrollContent.transform, false);
             go.GetComponent<Image>().color = Color.clear;
 
@@ -257,7 +258,7 @@ namespace AmarionCodex.UI
             hl.childControlWidth = false;
 
             // NPC name
-            string displayName = discovered ? BestiaryDataProvider.GetDisplayName(entry) : "???";
+            string displayName = discovered ? bestiary.Name : "???";
             Color nameColor = discovered ? CodexStyles.InkDark : CodexStyles.Undiscovered;
             FontStyles nameStyle = discovered ? FontStyles.Normal : FontStyles.Italic;
             var nameText = CreateLabel(go.transform, "Name", displayName,
@@ -266,7 +267,7 @@ namespace AmarionCodex.UI
             nameLE.flexibleWidth = 1;
 
             // Boss badge
-            if (discovered && entry.NPCUnique)
+            if (discovered && bestiary.IsBoss)
             {
                 var badge = CreateLabel(go.transform, "BossBadge", "BOSS",
                     CodexStyles.BadgeFontSize, CodexStyles.InkRed, FontStyles.Bold);
@@ -285,8 +286,7 @@ namespace AmarionCodex.UI
 
             // Click handler
             BestiaryEntry be = bestiary; // capture
-            bool d = discovered;
-            go.GetComponent<Button>().onClick.AddListener(() => OnEntryClicked(be, d));
+            go.GetComponent<Button>().onClick.AddListener(() => OnEntryClicked(be, discovered));
 
             // Hover color
             var btn = go.GetComponent<Button>();
@@ -311,7 +311,6 @@ namespace AmarionCodex.UI
 
         private void ShowDetailView(BestiaryEntry bestiary, bool discovered)
         {
-            var entry = bestiary.Entry;
             DetailView.SetActive(true);
             ClearChildren(DetailScrollContent, _detailElements);
 
@@ -358,7 +357,7 @@ namespace AmarionCodex.UI
                 notFoundText.alignment = TextAlignmentOptions.Center;
 
                 var seekText = CreateLabel(padding.transform, "Seek",
-                    $"Seek it out in <b><color=#6B4F2E>{entry.NPCZoneName}</color></b>.",
+                    $"Seek it out in <b><color=#6B4F2E>{bestiary.ZoneName}</color></b>.",
                     14, CodexStyles.Undiscovered, FontStyles.Italic);
                 seekText.alignment = TextAlignmentOptions.Center;
                 seekText.enableWordWrapping = true;
@@ -370,16 +369,15 @@ namespace AmarionCodex.UI
             // ── Discovered NPC Detail ──
 
             // Name + Level header line
-            string entryDisplayName = BestiaryDataProvider.GetDisplayName(entry);
-            string headerStr = entry.NPCUnique
-                ? $"{entryDisplayName}  <color=#8B2323><size={CodexStyles.BadgeFontSize}>BOSS</size></color>"
-                : entryDisplayName;
+            string headerStr = bestiary.IsBoss
+                ? $"{bestiary.Name}  <color=#8B2323><size={CodexStyles.BadgeFontSize}>BOSS</size></color>"
+                : bestiary.Name;
             var headerText = CreateLabel(padding.transform, "Header", headerStr,
                 CodexStyles.DetailTitleFontSize, CodexStyles.InkDark, FontStyles.Normal);
             headerText.richText = true;
 
             // Level + Kill count on one line
-            int kills = EncounterTracker.GetKillCount(entry.NPCName);
+            int kills = EncounterTracker.GetKillCount(bestiary.NormalizedName);
             string levelStr = kills > 0
                 ? $"{bestiary.LevelString}  <color=#78593A><size={CodexStyles.DetailBodyFontSize - 1}>({kills:N0} slain)</size></color>"
                 : bestiary.LevelString;
@@ -387,12 +385,12 @@ namespace AmarionCodex.UI
                 CodexStyles.DetailBodyFontSize + 2, CodexStyles.InkFaded, FontStyles.Normal);
             levelLine.richText = true;
 
-            var zoneLine = CreateLabel(padding.transform, "Zone",
-                entry.NPCZoneName,
+            CreateLabel(padding.transform, "Zone",
+                bestiary.ZoneName,
                 CodexStyles.DetailBodyFontSize + 1, CodexStyles.InkFaded, FontStyles.Italic);
 
             // ── Loot Section ──
-            if (entry.NPCLoot != null && entry.NPCLoot.Count > 0)
+            if (bestiary.Loot != null && bestiary.Loot.Count > 0)
             {
                 AddSpacer(padding.transform, 6);
                 AddDivider(padding.transform);
@@ -401,12 +399,12 @@ namespace AmarionCodex.UI
                 CreateLabel(padding.transform, "LootHeader", "Drops",
                     CodexStyles.DetailSectionFontSize, CodexStyles.TitleBarTop, FontStyles.Normal);
 
-                foreach (var itemName in entry.NPCLoot)
+                foreach (var itemName in bestiary.Loot)
                 {
                     if (string.IsNullOrEmpty(itemName))
                         continue;
 
-                    var itemLine = CreateLabel(padding.transform, "Loot_" + itemName,
+                    CreateLabel(padding.transform, "Loot_" + itemName,
                         $"  \u2022 {itemName}",
                         CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal);
                 }
@@ -414,9 +412,9 @@ namespace AmarionCodex.UI
 
             // ── Quest Section ──
             bool hasQuests = false;
-            if (entry.NPCQuestsTurnIn != null && entry.NPCQuestsTurnIn.Count > 0)
+            if (bestiary.QuestsTurnIn != null && bestiary.QuestsTurnIn.Count > 0)
                 hasQuests = true;
-            if (entry.NPCQuestsGiven != null && entry.NPCQuestsGiven.Count > 0)
+            if (bestiary.QuestsGiven != null && bestiary.QuestsGiven.Count > 0)
                 hasQuests = true;
 
             if (hasQuests)
@@ -428,25 +426,25 @@ namespace AmarionCodex.UI
                 CreateLabel(padding.transform, "QuestHeader", "Quests",
                     CodexStyles.DetailSectionFontSize, CodexStyles.TitleBarTop, FontStyles.Normal);
 
-                if (entry.NPCQuestsTurnIn != null)
+                if (bestiary.QuestsTurnIn != null)
                 {
-                    foreach (var quest in entry.NPCQuestsTurnIn)
+                    foreach (var questName in bestiary.QuestsTurnIn)
                     {
-                        if (quest == null) continue;
-                        CreateLabel(padding.transform, "QuestTurnIn_" + quest.QuestName,
-                            $"  \u276F {quest.QuestName} <color=#78593A><size=11><i>(turn-in)</i></size></color>",
+                        if (string.IsNullOrEmpty(questName)) continue;
+                        CreateLabel(padding.transform, "QuestTurnIn_" + questName,
+                            $"  \u276F {questName} <color=#78593A><size=11><i>(turn-in)</i></size></color>",
                             CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal)
                             .richText = true;
                     }
                 }
 
-                if (entry.NPCQuestsGiven != null)
+                if (bestiary.QuestsGiven != null)
                 {
-                    foreach (var quest in entry.NPCQuestsGiven)
+                    foreach (var questName in bestiary.QuestsGiven)
                     {
-                        if (quest == null) continue;
-                        CreateLabel(padding.transform, "QuestGiven_" + quest.QuestName,
-                            $"  \u276F {quest.QuestName} <color=#78593A><size=11><i>(given by)</i></size></color>",
+                        if (string.IsNullOrEmpty(questName)) continue;
+                        CreateLabel(padding.transform, "QuestGiven_" + questName,
+                            $"  \u276F {questName} <color=#78593A><size=11><i>(given by)</i></size></color>",
                             CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal)
                             .richText = true;
                     }
@@ -454,7 +452,7 @@ namespace AmarionCodex.UI
             }
 
             // ── Quest Items Section ──
-            if (entry.NPCItemsGivenForQuests != null && entry.NPCItemsGivenForQuests.Count > 0)
+            if (bestiary.QuestItems != null && bestiary.QuestItems.Count > 0)
             {
                 AddSpacer(padding.transform, 6);
                 AddDivider(padding.transform);
@@ -463,11 +461,11 @@ namespace AmarionCodex.UI
                 CreateLabel(padding.transform, "QuestItemHeader", "Quest Items",
                     CodexStyles.DetailSectionFontSize, CodexStyles.TitleBarTop, FontStyles.Normal);
 
-                foreach (var item in entry.NPCItemsGivenForQuests)
+                foreach (var itemName in bestiary.QuestItems)
                 {
-                    if (item == null) continue;
-                    CreateLabel(padding.transform, "QuestItem_" + item.ItemName,
-                        $"  \u2022 {item.ItemName}",
+                    if (string.IsNullOrEmpty(itemName)) continue;
+                    CreateLabel(padding.transform, "QuestItem_" + itemName,
+                        $"  \u2022 {itemName}",
                         CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal);
                 }
             }

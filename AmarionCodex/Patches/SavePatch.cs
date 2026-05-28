@@ -5,7 +5,6 @@ namespace AmarionCodex.Patches
 {
     /// <summary>
     /// Persists encounter data whenever the game saves.
-    /// Also loads encounter data when GameManager.Start() fires (entering the game world).
     /// </summary>
     [HarmonyPatch(typeof(GameManager), nameof(GameManager.SaveGameData))]
     internal static class SavePatch
@@ -17,7 +16,6 @@ namespace AmarionCodex.Patches
                 return;
 
             EncounterTracker.Save(GameData.CurrentCharacterSlot.index);
-            ZoneSpawnRegistry.Save();
         }
     }
 
@@ -35,7 +33,6 @@ namespace AmarionCodex.Patches
             if (GameData.CurrentCharacterSlot == null)
                 return;
 
-            ZoneSpawnRegistry.Load();
             EncounterTracker.Load(GameData.CurrentCharacterSlot.index);
         }
     }

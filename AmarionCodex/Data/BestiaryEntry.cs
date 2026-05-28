@@ -1,23 +1,42 @@
+using System.Collections.Generic;
+
 namespace AmarionCodex.Data
 {
     /// <summary>
-    /// A deduplicated bestiary entry representing a unique NPC within a zone.
-    /// Combines multiple KnowledgeEntry records (same NPC at different levels)
-    /// into a single entry with a level range.
+    /// A bestiary entry representing a unique NPC within a zone.
+    /// Wraps the static JSON data from bestiary_data.json.
     /// </summary>
     internal class BestiaryEntry
     {
-        /// <summary>
-        /// A representative KnowledgeEntry (the lowest-level one) used for
-        /// name, loot, quests, boss flag, etc.
-        /// </summary>
-        public KnowledgeEntry Entry;
+        /// <summary>NPC display name (proper case).</summary>
+        public string Name;
 
-        /// <summary>Lowest level this NPC appears at in this zone.</summary>
+        /// <summary>Normalized NPC name (lowercase) used as discovery key.</summary>
+        public string NormalizedName;
+
+        /// <summary>Lowest level this NPC appears at.</summary>
         public int MinLevel;
 
-        /// <summary>Highest level this NPC appears at in this zone.</summary>
+        /// <summary>Highest level this NPC appears at.</summary>
         public int MaxLevel;
+
+        /// <summary>Whether this NPC is a boss/unique.</summary>
+        public bool IsBoss;
+
+        /// <summary>Zone this entry belongs to.</summary>
+        public string ZoneName;
+
+        /// <summary>Loot drop names.</summary>
+        public List<string> Loot;
+
+        /// <summary>Quest names this NPC gives.</summary>
+        public List<string> QuestsGiven;
+
+        /// <summary>Quest names this NPC accepts turn-ins for.</summary>
+        public List<string> QuestsTurnIn;
+
+        /// <summary>Quest item names this NPC gives.</summary>
+        public List<string> QuestItems;
 
         /// <summary>
         /// Returns a display string for the level: "Level 5" or "Level 5-10".
@@ -32,26 +51,18 @@ namespace AmarionCodex.Data
             }
         }
 
-        public BestiaryEntry(KnowledgeEntry entry)
+        public BestiaryEntry(NpcData npc, string zoneName)
         {
-            Entry = entry;
-            MinLevel = entry.NPCLevel;
-            MaxLevel = entry.NPCLevel;
-        }
-
-        /// <summary>
-        /// Incorporate another level variant of the same NPC.
-        /// Keeps the lowest-level entry as the representative and expands the range.
-        /// </summary>
-        public void AddVariant(KnowledgeEntry entry)
-        {
-            if (entry.NPCLevel < MinLevel)
-            {
-                MinLevel = entry.NPCLevel;
-                Entry = entry;
-            }
-            if (entry.NPCLevel > MaxLevel)
-                MaxLevel = entry.NPCLevel;
+            Name = npc.name;
+            NormalizedName = npc.normalizedName;
+            MinLevel = npc.minLevel;
+            MaxLevel = npc.maxLevel;
+            IsBoss = npc.isBoss;
+            ZoneName = zoneName;
+            Loot = npc.loot ?? new List<string>();
+            QuestsGiven = npc.questsGiven ?? new List<string>();
+            QuestsTurnIn = npc.questsTurnIn ?? new List<string>();
+            QuestItems = npc.questItems ?? new List<string>();
         }
     }
 }

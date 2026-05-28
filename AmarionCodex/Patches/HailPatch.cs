@@ -1,19 +1,19 @@
 using AmarionCodex.Data;
 using HarmonyLib;
+using UnityEngine;
 
 namespace AmarionCodex.Patches
 {
     /// <summary>
-    /// Marks an NPC as discovered when the player targets it (click or Tab).
-    /// Uses the player's current zone for discovery tracking.
+    /// Marks an NPC as discovered when the player hails (talks to) it.
     /// </summary>
-    [HarmonyPatch(typeof(Character), nameof(Character.TargetMe))]
-    internal static class TargetPatch
+    [HarmonyPatch(typeof(NPCDialogManager), nameof(NPCDialogManager.GenericHail))]
+    internal static class HailPatch
     {
         [HarmonyPostfix]
-        static void Postfix(Character __instance)
+        static void Postfix(NPCDialogManager __instance)
         {
-            if (__instance == null || !__instance.isNPC)
+            if (__instance == null)
                 return;
 
             var npc = __instance.GetComponent<NPC>();

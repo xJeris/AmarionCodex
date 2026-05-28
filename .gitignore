@@ -5,6 +5,12 @@ obj/
 # Reference code (decompiled game source)
 reference/
 
+# Dev tools (data pipeline scripts)
+tools/
+
+# Scanner DLL (dev-only, not distributed)
+AmarionCodexScanner/
+
 # Planning and Claude docs
 CLAUDE.md
 PLAN.md

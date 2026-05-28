@@ -13,6 +13,7 @@ namespace AmarionCodex.Data
         private static Dictionary<string, int> _killCounts = new Dictionary<string, int>();
         private static int _loadedSlot = -1;
 
+        public static int LoadedSlot => _loadedSlot;
         public const int MaxKillCount = 9999;
         private const char KeySeparator = '|';
 
@@ -53,35 +54,28 @@ namespace AmarionCodex.Data
 
         /// <summary>
         /// Mark an NPC as discovered using a raw zone name (scene name or loot zone).
-        /// Resolves the raw zone to canonical zones and discovers for all matching ones.
-        /// Also records the NPC in the shared ZoneSpawnRegistry so that future
-        /// characters see it in the zone list even before discovering it themselves.
-        /// Returns true if any new discovery was made.
+        /// Resolves the raw zone to canonical zone via BestiaryDatabase.
+        /// Returns true if a new discovery was made.
         /// </summary>
         public static bool Discover(string normalizedNpcName, string rawZone)
         {
             if (string.IsNullOrEmpty(normalizedNpcName))
                 return false;
 
-            var canonicalZones = BestiaryDataProvider.GetCanonicalZones(rawZone);
-            if (canonicalZones.Count == 0)
+            // Resolve the scene/raw zone to a canonical zone name
+            string canonicalZone = BestiaryDatabase.ResolveSceneToZone(rawZone);
+            if (string.IsNullOrEmpty(canonicalZone))
                 return false;
 
-            bool anyNew = false;
-            foreach (var zone in canonicalZones)
+            // Only discover for the zone the player is actually in
+            string key = MakeKey(normalizedNpcName, canonicalZone);
+            if (_discovered.Add(key))
             {
-                // Record in the shared registry so this NPC always appears
-                // in this zone's list for all characters
-                ZoneSpawnRegistry.Record(normalizedNpcName, zone);
-
-                string key = MakeKey(normalizedNpcName, zone);
-                if (_discovered.Add(key))
-                {
-                    anyNew = true;
-                    OnNewDiscovery?.Invoke(key);
-                }
+                OnNewDiscovery?.Invoke(key);
+                return true;
             }
-            return anyNew;
+
+            return false;
         }
 
         /// <summary>
@@ -141,21 +135,19 @@ namespace AmarionCodex.Data
                         _killCounts[data.KillNames[i]] = data.KillValues[i];
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Debug.LogWarning($"[AmarionCodex] Failed to load discoveries for slot {slotIndex}: {ex.Message}");
             }
         }
 
         /// <summary>
         /// Migrates old-format discovery keys (name only, no '|') to compound keys
-        /// (name|zone) by looking up all zones each NPC appears in.
+        /// (name|zone) by looking up zones from the static bestiary database.
         /// Old keys are removed after migration.
         /// </summary>
         private static void MigrateOldKeys()
         {
-            if (GameData.KnowledgeDatabase == null || GameData.KnowledgeDatabase.GameKnowledge == null)
-                return;
-
             var oldKeys = new List<string>();
             foreach (var key in _discovered)
             {
@@ -166,33 +158,16 @@ namespace AmarionCodex.Data
             if (oldKeys.Count == 0)
                 return;
 
-            // Build a lookup: normalized NPC name -> set of canonical zones
-            var npcZones = new Dictionary<string, HashSet<string>>();
-            foreach (var entry in GameData.KnowledgeDatabase.GameKnowledge)
-            {
-                if (string.IsNullOrEmpty(entry.NPCName) || string.IsNullOrEmpty(entry.NPCZoneName))
-                    continue;
-
-                if (!npcZones.TryGetValue(entry.NPCName, out var zones))
-                {
-                    zones = new HashSet<string>();
-                    npcZones[entry.NPCName] = zones;
-                }
-
-                foreach (var z in BestiaryDataProvider.GetCanonicalZones(entry.NPCZoneName))
-                    zones.Add(z);
-            }
-
+            // Legacy v1 saves only stored NPC names without zone info.
+            // We can't know which zone the player originally saw the NPC in,
+            // so we grant credit in all zones as a one-time migration courtesy.
             foreach (var oldKey in oldKeys)
             {
                 _discovered.Remove(oldKey);
-                if (npcZones.TryGetValue(oldKey, out var zones))
-                {
-                    foreach (var zone in zones)
-                        _discovered.Add(MakeKey(oldKey, zone));
-                }
+                var zones = BestiaryDatabase.GetZonesForNpc(oldKey);
+                foreach (var zone in zones)
+                    _discovered.Add(MakeKey(oldKey, zone));
             }
-
         }
 
         public static void Save()
@@ -225,8 +200,9 @@ namespace AmarionCodex.Data
                 string json = JsonUtility.ToJson(data, true);
                 File.WriteAllText(path, json);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Debug.LogWarning($"[AmarionCodex] Failed to save discoveries for slot {slotIndex}: {ex.Message}");
             }
         }
 

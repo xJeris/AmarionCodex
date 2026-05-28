@@ -31,11 +31,14 @@ namespace AmarionCodex.Patches
 
             if (text == "/codexreset")
             {
+                if (EncounterTracker.LoadedSlot < 0)
+                {
+                    UnityEngine.Debug.LogWarning("[AmarionCodex] /codexreset ignored — no save slot loaded");
+                    return false;
+                }
+                int slot = EncounterTracker.LoadedSlot;
                 EncounterTracker.Clear();
-                ZoneSpawnRegistry.Clear();
-                EncounterTracker.Save();
-                ZoneSpawnRegistry.Save();
-                BestiaryDataProvider.ClearCache();
+                EncounterTracker.Save(slot);
                 return false;
             }
 

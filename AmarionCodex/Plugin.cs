@@ -1,3 +1,4 @@
+using System.IO;
 using AmarionCodex.Data;
 using AmarionCodex.UI;
 using BepInEx;
@@ -11,7 +12,7 @@ namespace AmarionCodex
     {
         public const string PluginGuid = "com.amarion.codex";
         public const string PluginName = "Amarion Codex";
-        public const string PluginVersion = "0.1.0";
+        public const string PluginVersion = "0.2.0";
 
         internal static Plugin Instance;
         internal static Harmony HarmonyInstance;
@@ -24,6 +25,13 @@ namespace AmarionCodex
         {
             Instance = this;
             Cfg = new PluginConfig(Config);
+
+            // Load static bestiary data from JSON
+            string pluginDir = Path.GetDirectoryName(Info.Location);
+            BestiaryDatabase.Load(pluginDir);
+
+            if (!BestiaryDatabase.IsLoaded)
+                Logger.LogWarning("Bestiary database failed to load — codex will be empty");
 
             HarmonyInstance = new Harmony(PluginGuid);
             HarmonyInstance.PatchAll(typeof(Plugin).Assembly);
@@ -40,8 +48,8 @@ namespace AmarionCodex
 
         internal void ToggleCodexWindow()
         {
-            // Don't open until the knowledge database is ready
-            if (GameData.KnowledgeDatabase == null)
+            // Don't open until the bestiary data is loaded
+            if (!BestiaryDatabase.IsLoaded)
                 return;
 
             if (_codexWindow == null)

@@ -1,18 +1,21 @@
 # Amarion Codex
 
-An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampowered.com/app/2382520/Erenshor/). Tracks enemies and NPCs the player has encountered through combat, targeting, or interaction. Undiscovered entries show as question marks. Content is organized by game zone.
+An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampowered.com/app/2382520/Erenshor/). Tracks enemies and NPCs the player has encountered through combat, conversation, or the consider command. Undiscovered entries show as question marks. Content is organized by game zone.
 
 ![Codex Sample](sample.png)
 
 ## Features
 
-- Automatically tracks NPCs you target, consider, or kill
-- Browse discovered entries organized by zone/dungeon
-- View NPC details: level, faction, loot tables, quest associations
+- **730 NPCs** across **43 zones** with loot tables, quest associations, and level data
+- Discover NPCs through combat (aggro), hailing, considering, or killing
+- Group and raid members trigger discoveries when NPCs aggro on them
+- Browse discovered entries organized by zone/dungeon with level ranges
+- View NPC details: level, loot tables, quest associations, kill count
 - Undiscovered entries shown as `???` placeholders with discovery count per zone
-- Open with keybind (default: K) or chat commands (`/codex`, `/bestiary`)
 - Search across all discovered entries
+- Open with keybind (default: K) or chat commands (`/codex`, `/bestiary`)
 - Per-character save data, persisted alongside game saves
+- Reset progress with `/codexreset`
 
 ## Requirements
 
@@ -22,8 +25,8 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 ## Installation
 
 1. Install BepInEx 5.4.x into your Erenshor game directory if you haven't already
-2. Download `AmarionCodex.dll` from the [Releases](../../releases) page
-3. Copy it to `<Erenshor>/BepInEx/plugins/AmarionCodex/`
+2. Download `AmarionCodex.dll` and `bestiary_data.json` from the [Releases](../../releases) page
+3. Copy both files to `<Erenshor>/BepInEx/plugins/AmarionCodex/`
 4. Launch the game
 
 ## Building from Source

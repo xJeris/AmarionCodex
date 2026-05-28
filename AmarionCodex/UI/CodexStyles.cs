@@ -57,13 +57,13 @@ namespace AmarionCodex.UI
         public const float StatusBarHeight = 22f;
         public const float SearchBarHeight = 38f;
         public const float EntryRowHeight = 30f;
-        public const float ZoneRowHeight  = 42f;
+        public const float ZoneRowHeight  = 34f;
         public const float Padding        = 8f;
 
         // ── Font Sizes ──
         public const float TitleFontSize        = 18f;
         public const float ZoneHeaderFontSize   = 20f;
-        public const float ZoneNameFontSize     = 13f;
+        public const float ZoneNameFontSize     = 11f;
         public const float ZoneLevelFontSize    = 10f;
         public const float EntryNameFontSize    = 14f;
         public const float EntryLevelFontSize   = 12f;
