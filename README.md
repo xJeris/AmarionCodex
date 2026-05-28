@@ -25,8 +25,8 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 ## Installation
 
 1. Install BepInEx 5.4.x into your Erenshor game directory if you haven't already
-2. Download `AmarionCodex.dll` and `bestiary_data.json` from the [Releases](../../releases) page
-3. Copy both files to `<Erenshor>/BepInEx/plugins/AmarionCodex/`
+2. Download `AmarionCodex.dll` from the [Releases](../../releases) page
+3. Copy the file to `<Erenshor>/BepInEx/plugins/AmarionCodex/`
 4. Launch the game
 
 ## Building from Source
