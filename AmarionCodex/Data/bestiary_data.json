@@ -284,29 +284,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Planar Fungus",
-          "normalizedName": "planar fungus",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Diamond",
-            "Fungal Spore",
-            "Luminstone",
-            "Star Stone"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -482,17 +459,6 @@
           "questItems": []
         },
         {
-          "name": "Apostalo Ostagla",
-          "normalizedName": "apostalo ostagla",
-          "minLevel": 20,
-          "maxLevel": 20,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Boatman",
           "normalizedName": "boatman",
           "minLevel": 22,
@@ -524,38 +490,6 @@
           "questsTurnIn": [
             "Flickering Souls"
           ],
-          "questItems": []
-        },
-        {
-          "name": "Watchlight",
-          "normalizedName": "watchlight",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [
-            "Azynthian Riftstone"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Botanist",
-          "normalizedName": "botanist",
-          "minLevel": 28,
-          "maxLevel": 35,
-          "isBoss": true,
-          "loot": [
-            "Bramblecull",
-            "Diamond",
-            "Gardener's Wrist Wrap",
-            "Graveweed Leaf",
-            "Living Chainmail Jacket",
-            "Living Chainmail Leggings",
-            "Twisted Branch"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -721,85 +655,6 @@
           "questItems": []
         },
         {
-          "name": "Azynthian Firebone",
-          "normalizedName": "azynthian firebone",
-          "minLevel": 34,
-          "maxLevel": 34,
-          "isBoss": false,
-          "loot": [
-            "Aetheria",
-            "Diamond",
-            "Ghostly Bone",
-            "Luminstone",
-            "Spell Scroll: Necrosis"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Azynthian Icebone",
-          "normalizedName": "azynthian icebone",
-          "minLevel": 34,
-          "maxLevel": 34,
-          "isBoss": false,
-          "loot": [
-            "Aetheria",
-            "Diamond",
-            "Ghostly Bone",
-            "Luminstone",
-            "Spell Scroll: Necrosis"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Deadweb Spider",
-          "normalizedName": "deadweb spider",
-          "minLevel": 34,
-          "maxLevel": 34,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Greater Azynthian Firebone",
-          "normalizedName": "greater azynthian firebone",
-          "minLevel": 34,
-          "maxLevel": 34,
-          "isBoss": false,
-          "loot": [
-            "Aetheria",
-            "Diamond",
-            "Ghostly Bone",
-            "Luminstone",
-            "Spell Scroll: Necrosis"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Greater Azynthian Icebone",
-          "normalizedName": "greater azynthian icebone",
-          "minLevel": 34,
-          "maxLevel": 34,
-          "isBoss": false,
-          "loot": [
-            "Aetheria",
-            "Diamond",
-            "Ghostly Bone",
-            "Luminstone",
-            "Spell Scroll: Necrosis"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Molorai Curator",
           "normalizedName": "molorai curator",
           "minLevel": 34,
@@ -816,73 +671,6 @@
             "Molorai Battle Chain",
             "Vampire Fang",
             "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Faceless Necromancer",
-          "normalizedName": "faceless necromancer",
-          "minLevel": 35,
-          "maxLevel": 35,
-          "isBoss": false,
-          "loot": [
-            "Cloth Gloves",
-            "Cloth Hood",
-            "Cloth Shoes",
-            "Cloth Sleeves",
-            "Necromantic Bow"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Gargoth",
-          "normalizedName": "gargoth",
-          "minLevel": 35,
-          "maxLevel": 35,
-          "isBoss": false,
-          "loot": [
-            "Diamond"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Ghoul",
-          "normalizedName": "ghoul",
-          "minLevel": 35,
-          "maxLevel": 35,
-          "isBoss": false,
-          "loot": [
-            "Bread",
-            "Cloth Gloves",
-            "Cloth Pants",
-            "Cloth Shirt",
-            "Cloth Shoes",
-            "Cloth Sleeves",
-            "Ghoul Scab",
-            "Luminstone",
-            "Star Stone",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Grounds Keeper",
-          "normalizedName": "grounds keeper",
-          "minLevel": 35,
-          "maxLevel": 35,
-          "isBoss": true,
-          "loot": [
-            "Bramblecull",
-            "Gardener's Wrist Wrap",
-            "Riftsnare Gem"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -930,117 +718,6 @@
           "maxLevel": 37,
           "isBoss": false,
           "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Exalted Firebone",
-          "normalizedName": "exalted firebone",
-          "minLevel": 37,
-          "maxLevel": 37,
-          "isBoss": true,
-          "loot": [
-            "Ancient Bone",
-            "Exalted Belt",
-            "Golden Plate",
-            "Riftsnare Gem"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Oracle Miress",
-          "normalizedName": "oracle miress",
-          "minLevel": 38,
-          "maxLevel": 38,
-          "isBoss": false,
-          "loot": [
-            "Azynthian Cape",
-            "Azynthian Dagger",
-            "Bread",
-            "Cloth Gloves",
-            "Cloth Pants",
-            "Cloth Shirt",
-            "Cloth Shoes",
-            "Cloth Sleeves",
-            "Luminstone",
-            "Riftsnare Gem",
-            "Spell Scroll: Infernis",
-            "Star Stone",
-            "Vampire Fang",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Oracle Tretha",
-          "normalizedName": "oracle tretha",
-          "minLevel": 38,
-          "maxLevel": 38,
-          "isBoss": false,
-          "loot": [
-            "Azynthian Armguards",
-            "Bread",
-            "Cloth Gloves",
-            "Cloth Pants",
-            "Cloth Shirt",
-            "Cloth Shoes",
-            "Cloth Sleeves",
-            "Gift of Azynthi",
-            "Luminstone",
-            "Riftsnare Gem",
-            "Spell Scroll: Infernis",
-            "Star Stone",
-            "Vampire Fang",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Vos Ashlyn",
-          "normalizedName": "vos ashlyn",
-          "minLevel": 38,
-          "maxLevel": 38,
-          "isBoss": false,
-          "loot": [
-            "Cloth Gloves",
-            "Cloth Hood",
-            "Cloth Shoes",
-            "Cloth Sleeves",
-            "Riftsnare Gem",
-            "Spell Scroll: Annihilate",
-            "Spell Scroll: Tenebris"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Planar Crawler",
-          "normalizedName": "planar crawler",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Spell Scroll: Group Regrowth",
-            "Spell Scroll: Necrotizing Bloom",
-            "Spell Scroll: Vibrant Regrowth"
-          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -1936,23 +1613,6 @@
           "questItems": [
             "Gift of Fernalla"
           ]
-        },
-        {
-          "name": "Jinx",
-          "normalizedName": "jinx",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": true,
-          "loot": [
-            "Abominal Ribcage",
-            "Creeping Waistband",
-            "Fernalla's Paintbrush",
-            "Planar Stone",
-            "Planar Stone Shards"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -1977,17 +1637,6 @@
             "Tattered Leather Sleeves",
             "Tattered Leather Tunic"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Pierson Obero",
-          "normalizedName": "pierson obero",
-          "minLevel": 15,
-          "maxLevel": 15,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -2376,19 +2025,6 @@
           "questItems": []
         },
         {
-          "name": "Orion Mycon",
-          "normalizedName": "orion mycon",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [
-            "The Great Willow's Branch"
-          ],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Blazefiend",
           "normalizedName": "blazefiend",
           "minLevel": 24,
@@ -2757,6 +2393,198 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        },
+        {
+          "name": "Apostalo Ostagla",
+          "normalizedName": "apostalo ostagla",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Botanist",
+          "normalizedName": "botanist",
+          "minLevel": 28,
+          "maxLevel": 35,
+          "isBoss": true,
+          "loot": [
+            "Bramblecull",
+            "Diamond",
+            "Gardener's Wrist Wrap",
+            "Graveweed Leaf",
+            "Living Chainmail Jacket",
+            "Living Chainmail Leggings",
+            "Twisted Branch"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Azynthian Firebone",
+          "normalizedName": "azynthian firebone",
+          "minLevel": 34,
+          "maxLevel": 34,
+          "isBoss": false,
+          "loot": [
+            "Aetheria",
+            "Diamond",
+            "Ghostly Bone",
+            "Luminstone",
+            "Spell Scroll: Necrosis"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Azynthian Icebone",
+          "normalizedName": "azynthian icebone",
+          "minLevel": 34,
+          "maxLevel": 34,
+          "isBoss": false,
+          "loot": [
+            "Aetheria",
+            "Diamond",
+            "Ghostly Bone",
+            "Luminstone",
+            "Spell Scroll: Necrosis"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Greater Azynthian Firebone",
+          "normalizedName": "greater azynthian firebone",
+          "minLevel": 34,
+          "maxLevel": 34,
+          "isBoss": false,
+          "loot": [
+            "Aetheria",
+            "Diamond",
+            "Ghostly Bone",
+            "Luminstone",
+            "Spell Scroll: Necrosis"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Greater Azynthian Icebone",
+          "normalizedName": "greater azynthian icebone",
+          "minLevel": 34,
+          "maxLevel": 34,
+          "isBoss": false,
+          "loot": [
+            "Aetheria",
+            "Diamond",
+            "Ghostly Bone",
+            "Luminstone",
+            "Spell Scroll: Necrosis"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Deadweb Spider",
+          "normalizedName": "deadweb spider",
+          "minLevel": 34,
+          "maxLevel": 34,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Faceless Necromancer",
+          "normalizedName": "faceless necromancer",
+          "minLevel": 35,
+          "maxLevel": 35,
+          "isBoss": false,
+          "loot": [
+            "Cloth Gloves",
+            "Cloth Hood",
+            "Cloth Shoes",
+            "Cloth Sleeves",
+            "Necromantic Bow"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Gargoth",
+          "normalizedName": "gargoth",
+          "minLevel": 35,
+          "maxLevel": 35,
+          "isBoss": false,
+          "loot": [
+            "Diamond"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Ghoul",
+          "normalizedName": "ghoul",
+          "minLevel": 35,
+          "maxLevel": 35,
+          "isBoss": false,
+          "loot": [
+            "Bread",
+            "Cloth Gloves",
+            "Cloth Pants",
+            "Cloth Shirt",
+            "Cloth Shoes",
+            "Cloth Sleeves",
+            "Ghoul Scab",
+            "Luminstone",
+            "Star Stone",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Grounds Keeper",
+          "normalizedName": "grounds keeper",
+          "minLevel": 35,
+          "maxLevel": 35,
+          "isBoss": true,
+          "loot": [
+            "Bramblecull",
+            "Gardener's Wrist Wrap",
+            "Riftsnare Gem"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Exalted Firebone",
+          "normalizedName": "exalted firebone",
+          "minLevel": 37,
+          "maxLevel": 37,
+          "isBoss": true,
+          "loot": [
+            "Ancient Bone",
+            "Exalted Belt",
+            "Golden Plate",
+            "Riftsnare Gem"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
@@ -3086,31 +2914,6 @@
           "maxLevel": 31,
           "isBoss": false,
           "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Planar Grizzly",
-          "normalizedName": "planar grizzly",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Bear Meat",
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Spell Scroll: Group Regrowth",
-            "Spell Scroll: Necrotizing Bloom",
-            "Spell Scroll: Vibrant Regrowth"
-          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -3487,17 +3290,6 @@
             "Flame Well Seed",
             "Kingsman"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Guardian of Brax",
-          "normalizedName": "guardian of brax",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -4398,17 +4190,6 @@
           "questItems": []
         },
         {
-          "name": "Prestigio Valusha",
-          "normalizedName": "prestigio valusha",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Brachette Leafwalker",
           "normalizedName": "brachette leafwalker",
           "minLevel": 25,
@@ -4685,154 +4466,12 @@
           "questItems": []
         },
         {
-          "name": "Daggerlegs",
-          "normalizedName": "daggerlegs",
-          "minLevel": 21,
-          "maxLevel": 21,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Citrine Stone",
-            "Concentration Band",
-            "Demon Claw",
-            "Diamond",
-            "Freeing Stone",
-            "Luminstone",
-            "Polished Stone",
-            "Ruby",
-            "Sea Glass",
-            "Shadowmaker"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Dire Wolf",
-          "normalizedName": "dire wolf",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [
-            "Wolf Meat"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Dream",
-          "normalizedName": "dream",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [
-            "Ancient Fang",
-            "Bear Meat",
-            "Chewed Armwraps",
-            "Dreamy Wand"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Fright",
-          "normalizedName": "fright",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Citrine Stone",
-            "Concentration Band",
-            "Demon Claw",
-            "Diamond",
-            "Freeing Stone",
-            "Luminstone",
-            "Polished Stone",
-            "Ruby",
-            "Sea Glass",
-            "Shadowmaker"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Headless",
-          "normalizedName": "headless",
-          "minLevel": 24,
-          "maxLevel": 24,
-          "isBoss": false,
-          "loot": [
-            "Aetheria",
-            "Bread",
-            "Ruby",
-            "Unholy Bonesaw"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Soul Linked Spider",
-          "normalizedName": "soul linked spider",
-          "minLevel": 24,
-          "maxLevel": 24,
-          "isBoss": false,
-          "loot": [
-            "Chain of Protection",
-            "Concentration Band",
-            "Freeing Stone",
-            "Shadowed Key",
-            "Spiderskin Shroud"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Dire Huntress",
-          "normalizedName": "dire huntress",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [
-            "Collar of the Huntress",
-            "Wolf Meat"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Phantom'S Ward",
           "normalizedName": "phantoms ward",
           "minLevel": 25,
           "maxLevel": 25,
           "isBoss": false,
           "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Warded Shadow",
-          "normalizedName": "warded shadow",
-          "minLevel": 26,
-          "maxLevel": 26,
-          "isBoss": false,
-          "loot": [
-            "Bread",
-            "Captured Light",
-            "Death's Decay",
-            "Diamond",
-            "Protector's Bracer",
-            "Shadow Helm",
-            "Thief of Breath",
-            "Trembling Chain"
-          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -5462,45 +5101,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Planar Flora",
-          "normalizedName": "planar flora",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Devoratrix Thorn",
-            "Fungus Covered Tunic",
-            "Loomingwood Branch"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Planar Minotaur",
-          "normalizedName": "planar minotaur",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Spell Scroll: Group Regrowth",
-            "Spell Scroll: Necrotizing Bloom",
-            "Spell Scroll: Vibrant Regrowth"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -5509,19 +5109,6 @@
       "levelRange": "20-28",
       "isDungeon": false,
       "npcs": [
-        {
-          "name": "A Young Wolf",
-          "normalizedName": "a young wolf",
-          "minLevel": 2,
-          "maxLevel": 2,
-          "isBoss": false,
-          "loot": [
-            "Wolf Meat"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
         {
           "name": "Spark Beetle",
           "normalizedName": "spark beetle",
@@ -5758,17 +5345,6 @@
         {
           "name": "Olden Lennova",
           "normalizedName": "olden lennova",
-          "minLevel": 15,
-          "maxLevel": 15,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Thomson Rhett",
-          "normalizedName": "thomson rhett",
           "minLevel": 15,
           "maxLevel": 15,
           "isBoss": false,
@@ -6176,22 +5752,6 @@
           "questItems": []
         },
         {
-          "name": "A Fungal Drone",
-          "normalizedName": "a fungal drone",
-          "minLevel": 17,
-          "maxLevel": 17,
-          "isBoss": false,
-          "loot": [
-            "A Fanged Caveskimmer",
-            "A Twisted Spider Leg",
-            "Fungal Spore",
-            "Luminstone"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Nightmarian Arcanist",
           "normalizedName": "nightmarian arcanist",
           "minLevel": 20,
@@ -6324,17 +5884,6 @@
             "Coiling Belt",
             "Reptilian Scales"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Solunarian Protector",
-          "normalizedName": "solunarian protector",
-          "minLevel": 37,
-          "maxLevel": 37,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -6659,19 +6208,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Vethalo Gala",
-          "normalizedName": "vethalo gala",
-          "minLevel": 15,
-          "maxLevel": 15,
-          "isBoss": false,
-          "loot": [
-            "Short Sword of Viropha"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -6856,6 +6392,89 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        },
+        {
+          "name": "Guardian of Brax",
+          "normalizedName": "guardian of brax",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Frost",
+          "normalizedName": "frost",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Lava Fiend",
+          "normalizedName": "lava fiend",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": true,
+          "loot": [
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Thaumic Boots",
+            "Thaumic Handwraps",
+            "Thaumic Hood",
+            "Thaumic Sleeves",
+            "Thaumic Trousers",
+            "Thaumic Vestiment",
+            "Thaumic Wraps"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Tundra Walker",
+          "normalizedName": "tundra walker",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Thaumic Boots",
+            "Thaumic Handwraps",
+            "Thaumic Hood",
+            "Thaumic Sleeves",
+            "Thaumic Trousers",
+            "Thaumic Vestiment",
+            "Thaumic Wraps",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Warder of Flame",
+          "normalizedName": "warder of flame",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": true,
+          "loot": [
+            "Cloak of Flame",
+            "Creator's Charm",
+            "Gauntlets of Fiery Strength",
+            "Planar Stone",
+            "Planar Stone Shards"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
@@ -7025,6 +6644,207 @@
             "Planar Stone",
             "Planar Stone Shards",
             "Skittering Boots"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Fungus",
+          "normalizedName": "planar fungus",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Diamond",
+            "Fungal Spore",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Crawler",
+          "normalizedName": "planar crawler",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Spell Scroll: Group Regrowth",
+            "Spell Scroll: Necrotizing Bloom",
+            "Spell Scroll: Vibrant Regrowth"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Jinx",
+          "normalizedName": "jinx",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": true,
+          "loot": [
+            "Abominal Ribcage",
+            "Creeping Waistband",
+            "Fernalla's Paintbrush",
+            "Planar Stone",
+            "Planar Stone Shards"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Grizzly",
+          "normalizedName": "planar grizzly",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Bear Meat",
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Spell Scroll: Group Regrowth",
+            "Spell Scroll: Necrotizing Bloom",
+            "Spell Scroll: Vibrant Regrowth"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Flora",
+          "normalizedName": "planar flora",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Devoratrix Thorn",
+            "Fungus Covered Tunic",
+            "Loomingwood Branch"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Minotaur",
+          "normalizedName": "planar minotaur",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Spell Scroll: Group Regrowth",
+            "Spell Scroll: Necrotizing Bloom",
+            "Spell Scroll: Vibrant Regrowth"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Faerie",
+          "normalizedName": "planar faerie",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Spell Scroll: Group Regrowth",
+            "Spell Scroll: Necrotizing Bloom",
+            "Spell Scroll: Vibrant Regrowth"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Cobra",
+          "normalizedName": "planar cobra",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Spell Scroll: Group Regrowth",
+            "Spell Scroll: Necrotizing Bloom",
+            "Spell Scroll: Vibrant Regrowth"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Planar Wolf",
+          "normalizedName": "planar wolf",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Chthonic Armwraps",
+            "Chthonic Handwraps",
+            "Chthonic Hood",
+            "Chthonic Pants",
+            "Chthonic Sandals",
+            "Chthonic Tunic",
+            "Chthonic Wristlet",
+            "Planar Stone",
+            "Planar Stone Shards",
+            "Spell Scroll: Group Regrowth",
+            "Spell Scroll: Necrotizing Bloom",
+            "Spell Scroll: Vibrant Regrowth",
+            "Wolf Meat"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -8114,19 +7934,6 @@
           "questItems": []
         },
         {
-          "name": "Lieutenant Ulrik",
-          "normalizedName": "lieutenant ulrik",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [
-            "The Tragedy at Goodsoil"
-          ],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Supply Sergeant Tipp",
           "normalizedName": "supply sergeant tipp",
           "minLevel": 25,
@@ -9014,30 +8821,6 @@
             "Ta'Dah's Shadows"
           ],
           "questItems": []
-        },
-        {
-          "name": "Planar Faerie",
-          "normalizedName": "planar faerie",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Spell Scroll: Group Regrowth",
-            "Spell Scroll: Necrotizing Bloom",
-            "Spell Scroll: Vibrant Regrowth"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -9395,30 +9178,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Planar Cobra",
-          "normalizedName": "planar cobra",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Spell Scroll: Group Regrowth",
-            "Spell Scroll: Necrotizing Bloom",
-            "Spell Scroll: Vibrant Regrowth"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -9427,17 +9186,6 @@
       "levelRange": "11-25",
       "isDungeon": false,
       "npcs": [
-        {
-          "name": "A Brackish Croc",
-          "normalizedName": "a brackish croc",
-          "minLevel": 8,
-          "maxLevel": 9,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
         {
           "name": "Aranuil Olaseo",
           "normalizedName": "aranuil olaseo",
@@ -10093,22 +9841,6 @@
           "questItems": []
         },
         {
-          "name": "Dream",
-          "normalizedName": "dream",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [
-            "Ancient Fang",
-            "Bear Meat",
-            "Chewed Armwraps",
-            "Dreamy Wand"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Fright",
           "normalizedName": "fright",
           "minLevel": 22,
@@ -10196,22 +9928,6 @@
             "Mooncutter",
             "Obsidian Boots",
             "Sea Glass"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Headless",
-          "normalizedName": "headless",
-          "minLevel": 24,
-          "maxLevel": 24,
-          "isBoss": true,
-          "loot": [
-            "Aetheria",
-            "Bread",
-            "Ruby",
-            "Unholy Bonesaw"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -10369,6 +10085,136 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        }
+      ]
+    },
+    {
+      "name": "Shivering Tomb",
+      "levelRange": "",
+      "isDungeon": true,
+      "npcs": [
+        {
+          "name": "Dream",
+          "normalizedName": "dream",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Ancient Fang",
+            "Bear Meat",
+            "Chewed Armwraps",
+            "Dreamy Wand"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Headless",
+          "normalizedName": "headless",
+          "minLevel": 24,
+          "maxLevel": 24,
+          "isBoss": false,
+          "loot": [
+            "Aetheria",
+            "Bread",
+            "Ruby",
+            "Unholy Bonesaw"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Soul Linked Spider",
+          "normalizedName": "soul linked spider",
+          "minLevel": 24,
+          "maxLevel": 24,
+          "isBoss": false,
+          "loot": [
+            "Chain of Protection",
+            "Concentration Band",
+            "Freeing Stone",
+            "Shadowed Key",
+            "Spiderskin Shroud"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Warded Shadow",
+          "normalizedName": "warded shadow",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Bread",
+            "Captured Light",
+            "Death's Decay",
+            "Diamond",
+            "Protector's Bracer",
+            "Shadow Helm",
+            "Thief of Breath",
+            "Trembling Chain"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Daggerlegs",
+          "normalizedName": "daggerlegs",
+          "minLevel": 21,
+          "maxLevel": 21,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Citrine Stone",
+            "Concentration Band",
+            "Demon Claw",
+            "Diamond",
+            "Freeing Stone",
+            "Luminstone",
+            "Polished Stone",
+            "Ruby",
+            "Sea Glass",
+            "Shadowmaker"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Fright",
+          "normalizedName": "fright",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Citrine Stone",
+            "Concentration Band",
+            "Demon Claw",
+            "Diamond",
+            "Freeing Stone",
+            "Luminstone",
+            "Polished Stone",
+            "Ruby",
+            "Sea Glass",
+            "Shadowmaker"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Phantom's Ward",
+          "minLevel": 0,
+          "maxLevel": 0,
+          "isBoss": false,
+          "loot": [],
+          "quests": []
         }
       ]
     },
@@ -10869,31 +10715,6 @@
           "questItems": []
         },
         {
-          "name": "Planar Wolf",
-          "normalizedName": "planar wolf",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Chthonic Armwraps",
-            "Chthonic Handwraps",
-            "Chthonic Hood",
-            "Chthonic Pants",
-            "Chthonic Sandals",
-            "Chthonic Tunic",
-            "Chthonic Wristlet",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Spell Scroll: Group Regrowth",
-            "Spell Scroll: Necrotizing Bloom",
-            "Spell Scroll: Vibrant Regrowth",
-            "Wolf Meat"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Shadow of Brax",
           "normalizedName": "shadow of brax",
           "minLevel": 40,
@@ -10985,29 +10806,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Tundra Walker",
-          "normalizedName": "tundra walker",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Thaumic Boots",
-            "Thaumic Handwraps",
-            "Thaumic Hood",
-            "Thaumic Sleeves",
-            "Thaumic Trousers",
-            "Thaumic Vestiment",
-            "Thaumic Wraps",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -11080,23 +10878,6 @@
           "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Valrae Cleary",
-          "normalizedName": "valrae cleary",
-          "minLevel": 15,
-          "maxLevel": 15,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [
-            "Keys for Valrae",
-            "Ogre Spice for Valrae"
-          ],
-          "questsTurnIn": [
-            "Keys for Valrae",
-            "Ogre Spice for Valrae"
-          ],
           "questItems": []
         },
         {
@@ -11356,23 +11137,6 @@
           "questItems": []
         },
         {
-          "name": "Warder of Flame",
-          "normalizedName": "warder of flame",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": true,
-          "loot": [
-            "Cloak of Flame",
-            "Creator's Charm",
-            "Gauntlets of Fiery Strength",
-            "Planar Stone",
-            "Planar Stone Shards"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Freed Spirit of Raval",
           "normalizedName": "freed spirit of raval",
           "minLevel": 45,
@@ -11553,30 +11317,6 @@
           "questItems": []
         },
         {
-          "name": "Cecil Threbb",
-          "normalizedName": "cecil threbb",
-          "minLevel": 6,
-          "maxLevel": 6,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [
-            "Wally's Moongill"
-          ],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Saya Seawatcher",
-          "normalizedName": "saya seawatcher",
-          "minLevel": 6,
-          "maxLevel": 6,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Wally Waldorf",
           "normalizedName": "wally waldorf",
           "minLevel": 6,
@@ -11625,41 +11365,8 @@
           "questItems": []
         },
         {
-          "name": "A Hermit",
-          "normalizedName": "a hermit",
-          "minLevel": 8,
-          "maxLevel": 8,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Alice Hewer",
           "normalizedName": "alice hewer",
-          "minLevel": 8,
-          "maxLevel": 8,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Bella Macmonalle",
-          "normalizedName": "bella macmonalle",
-          "minLevel": 8,
-          "maxLevel": 8,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Chazz Pillot",
-          "normalizedName": "chazz pillot",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -11695,28 +11402,6 @@
         {
           "name": "Desmond Shaffer",
           "normalizedName": "desmond shaffer",
-          "minLevel": 8,
-          "maxLevel": 8,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Dockhand Nelson",
-          "normalizedName": "dockhand nelson",
-          "minLevel": 8,
-          "maxLevel": 8,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Grady Thornox",
-          "normalizedName": "grady thornox",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -11797,17 +11482,6 @@
         {
           "name": "Percy Ildia",
           "normalizedName": "percy ildia",
-          "minLevel": 8,
-          "maxLevel": 8,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Samuel Thatcher",
-          "normalizedName": "samuel thatcher",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -11936,19 +11610,6 @@
           "questItems": []
         },
         {
-          "name": "Trevor Ulchand",
-          "normalizedName": "trevor ulchand",
-          "minLevel": 15,
-          "maxLevel": 15,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [
-            "Daggerhart Ancestral Coin"
-          ],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Crypt Keeper",
           "normalizedName": "crypt keeper",
           "minLevel": 18,
@@ -11962,22 +11623,6 @@
             "Shivering Leather Boots",
             "Shivering Leather Skullcap",
             "Shivering Leather Sleeves"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Alexander Farland",
-          "normalizedName": "alexander farland",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [
-            "Arcanist Cap",
-            "Citrine Stone",
-            "Luminstone",
-            "Star Stone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -12031,22 +11676,6 @@
         {
           "name": "Lucian Revald",
           "normalizedName": "lucian revald",
-          "minLevel": 22,
-          "maxLevel": 22,
-          "isBoss": false,
-          "loot": [
-            "Arcanist Cap",
-            "Citrine Stone",
-            "Luminstone",
-            "Star Stone"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Nylith Valorro",
-          "normalizedName": "nylith valorro",
           "minLevel": 22,
           "maxLevel": 22,
           "isBoss": false,
@@ -12143,17 +11772,6 @@
           "questItems": [
             "Dock Pass"
           ]
-        },
-        {
-          "name": "Grayleigh Hawke",
-          "normalizedName": "grayleigh hawke",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         },
         {
           "name": "Island Guard",
@@ -12576,27 +12194,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Lava Fiend",
-          "normalizedName": "lava fiend",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": true,
-          "loot": [
-            "Planar Stone",
-            "Planar Stone Shards",
-            "Thaumic Boots",
-            "Thaumic Handwraps",
-            "Thaumic Hood",
-            "Thaumic Sleeves",
-            "Thaumic Trousers",
-            "Thaumic Vestiment",
-            "Thaumic Wraps"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -12766,25 +12363,6 @@
             "Ritual Stone",
             "Rotting Sivakayan Helm",
             "Tunic of Undying Faith"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Bassalt Vallano",
-          "normalizedName": "bassalt vallano",
-          "minLevel": 10,
-          "maxLevel": 10,
-          "isBoss": true,
-          "loot": [
-            "Ancient Bone",
-            "Backplate",
-            "Blue Leather Boots",
-            "Note to Liam",
-            "Polished Longsword",
-            "Skeleton Eye",
-            "Star Stone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -13276,24 +12854,6 @@
           "questItems": []
         },
         {
-          "name": "Historian of Braxonia",
-          "normalizedName": "historian of braxonia",
-          "minLevel": 31,
-          "maxLevel": 31,
-          "isBoss": false,
-          "loot": [
-            "Braxonian Scripture",
-            "Braxonian Testament",
-            "Diamond",
-            "Droplet of the First Frost",
-            "Frozen Lava Ring",
-            "Polished Stone"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Liam Kilfa",
           "normalizedName": "liam kilfa",
           "minLevel": 31,
@@ -13330,17 +12890,6 @@
           "normalizedName": "summoned elder dryad",
           "minLevel": 35,
           "maxLevel": 35,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Frost",
-          "normalizedName": "frost",
-          "minLevel": 42,
-          "maxLevel": 42,
           "isBoss": false,
           "loot": [],
           "questsGiven": [],
@@ -13427,26 +12976,6 @@
           "maxLevel": 8,
           "isBoss": false,
           "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "A Highwayman Raider",
-          "normalizedName": "a highwayman raider",
-          "minLevel": 13,
-          "maxLevel": 13,
-          "isBoss": false,
-          "loot": [
-            "Bread",
-            "Gambler's Cape",
-            "Highwayman Pants",
-            "Luminstone",
-            "Ornate Toolbox",
-            "Star Stone",
-            "Sticky Gloves",
-            "Water"
-          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -15073,22 +14602,6 @@
           "questItems": []
         },
         {
-          "name": "An Immature Nagalok",
-          "normalizedName": "an immature nagalok",
-          "minLevel": 14,
-          "maxLevel": 14,
-          "isBoss": false,
-          "loot": [
-            "A Worm Eel",
-            "Nagalok Claw",
-            "Reptilian Scales",
-            "Seaweed"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Aillee Desten",
           "normalizedName": "aillee desten",
           "minLevel": 15,
@@ -15755,11 +15268,11 @@
     },
     {
       "key": "ShiveringTomb",
-      "value": "Island Tomb"
+      "value": "Shivering Tomb"
     },
     {
       "key": "ShiveringTomb2",
-      "value": "Island Tomb"
+      "value": "Shivering Tomb"
     },
     {
       "key": "StowawayPortal",
