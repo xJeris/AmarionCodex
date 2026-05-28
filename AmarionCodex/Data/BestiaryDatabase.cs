@@ -17,6 +17,10 @@ namespace AmarionCodex.Data
         private static Dictionary<string, string> _displayNameIndex;
         private static Dictionary<string, string> _sceneToZone;
         private static List<string> _sortedZoneNames;
+        // NPCs that should always be discovered in a specific zone regardless of
+        // where the player encounters them (e.g. Watcher's Lens spectres can spawn
+        // in any zone but should credit to "Watchers Lens").
+        private static Dictionary<string, string> _discoveryZoneOverrides;
         private static bool _loaded;
 
         private const string EmbeddedResourceName = "AmarionCodex.bestiary_data.json";
@@ -34,6 +38,7 @@ namespace AmarionCodex.Data
             _displayNameIndex = new Dictionary<string, string>();
             _sceneToZone = new Dictionary<string, string>();
             _sortedZoneNames = new List<string>();
+            _discoveryZoneOverrides = new Dictionary<string, string>();
 
             string json = null;
 
@@ -230,6 +235,29 @@ namespace AmarionCodex.Data
                 foreach (var mapping in _data.sceneToZone)
                     _sceneToZone[mapping.key] = mapping.value;
             }
+
+            // Build discovery zone overrides for NPCs that appear exclusively in
+            // "Watchers Lens". These spectres can spawn in any zone via the game's
+            // Watcher's Lens mechanic, but discovery should always credit to that zone.
+            var npcZoneCounts = new Dictionary<string, List<string>>();
+            foreach (var zone in _data.zones)
+            {
+                foreach (var npc in zone.npcs)
+                {
+                    if (!npcZoneCounts.TryGetValue(npc.normalizedName, out var zones))
+                    {
+                        zones = new List<string>();
+                        npcZoneCounts[npc.normalizedName] = zones;
+                    }
+                    zones.Add(zone.name);
+                }
+            }
+            const string WatchersLens = "Watchers Lens";
+            foreach (var kvp in npcZoneCounts)
+            {
+                if (kvp.Value.Count == 1 && kvp.Value[0] == WatchersLens)
+                    _discoveryZoneOverrides[kvp.Key] = WatchersLens;
+            }
         }
 
         /// <summary>
@@ -359,6 +387,19 @@ namespace AmarionCodex.Data
                 return sceneName;
 
             return sceneName;
+        }
+
+        /// <summary>
+        /// Returns a zone override for NPCs that should always be discovered in a
+        /// specific zone regardless of the player's current location (e.g. Watcher's
+        /// Lens spectres). Returns null if no override applies.
+        /// </summary>
+        public static string GetDiscoveryZoneOverride(string normalizedNpcName)
+        {
+            if (!_loaded || _discoveryZoneOverrides == null)
+                return null;
+            _discoveryZoneOverrides.TryGetValue(normalizedNpcName, out string zone);
+            return zone;
         }
 
         /// <summary>

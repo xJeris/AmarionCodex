@@ -8581,7 +8581,7 @@
     },
     {
       "name": "Reliquary Hall",
-      "levelRange": "5-25",
+      "levelRange": "5-16",
       "isDungeon": false,
       "npcs": [
         {
@@ -8604,17 +8604,6 @@
           "loot": [
             "Spectral Sword"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "A Wisp",
-          "normalizedName": "a wisp",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -12108,17 +12097,6 @@
           "normalizedName": "validus greencent",
           "minLevel": 22,
           "maxLevel": 22,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "A Wisp",
-          "normalizedName": "a wisp",
-          "minLevel": 25,
-          "maxLevel": 25,
           "isBoss": false,
           "loot": [],
           "questsGiven": [],

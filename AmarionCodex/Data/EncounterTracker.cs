@@ -62,8 +62,12 @@ namespace AmarionCodex.Data
             if (string.IsNullOrEmpty(normalizedNpcName))
                 return false;
 
+            // Check for zone override (e.g. Watcher's Lens spectres always
+            // credit to "Watchers Lens" regardless of where the player is)
+            string overrideZone = BestiaryDatabase.GetDiscoveryZoneOverride(normalizedNpcName);
+
             // Resolve the scene/raw zone to a canonical zone name
-            string canonicalZone = BestiaryDatabase.ResolveSceneToZone(rawZone);
+            string canonicalZone = overrideZone ?? BestiaryDatabase.ResolveSceneToZone(rawZone);
             if (string.IsNullOrEmpty(canonicalZone))
                 return false;
 
