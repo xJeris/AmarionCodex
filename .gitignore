@@ -11,11 +11,8 @@ tools/
 # Scanner DLL (dev-only, not distributed)
 AmarionCodexScanner/
 
-# Planning and Claude docs
+# Claude Code project instructions
 CLAUDE.md
-PLAN.md
-mockup.html
-zone_mapping.md
 
 # VS / Rider
 .vs/

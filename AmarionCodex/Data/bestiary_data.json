@@ -316,6 +316,20 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Mature Grass Spider",
+          "normalizedName": "a mature grass spider",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Strange Hermit",
           "normalizedName": "a strange hermit",
           "minLevel": 15,
@@ -468,6 +482,38 @@
           "questItems": []
         },
         {
+          "name": "Apostalo Ostagla",
+          "normalizedName": "apostalo ostagla",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Boatman",
+          "normalizedName": "boatman",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Cloth Gloves",
+            "Cloth Hood",
+            "Cloth Pants",
+            "Cloth Shirt",
+            "Cloth Shoes",
+            "Cloth Sleeves",
+            "Graveweed Leaf",
+            "Idol of Sivakaya",
+            "Neophyte Necklace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Flicker of Souls",
           "normalizedName": "flicker of souls",
           "minLevel": 25,
@@ -478,6 +524,19 @@
           "questsTurnIn": [
             "Flickering Souls"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Watchlight",
+          "normalizedName": "watchlight",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [
+            "Azynthian Riftstone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -892,6 +951,77 @@
           "questItems": []
         },
         {
+          "name": "Oracle Miress",
+          "normalizedName": "oracle miress",
+          "minLevel": 38,
+          "maxLevel": 38,
+          "isBoss": false,
+          "loot": [
+            "Azynthian Cape",
+            "Azynthian Dagger",
+            "Bread",
+            "Cloth Gloves",
+            "Cloth Pants",
+            "Cloth Shirt",
+            "Cloth Shoes",
+            "Cloth Sleeves",
+            "Luminstone",
+            "Riftsnare Gem",
+            "Spell Scroll: Infernis",
+            "Star Stone",
+            "Vampire Fang",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Oracle Tretha",
+          "normalizedName": "oracle tretha",
+          "minLevel": 38,
+          "maxLevel": 38,
+          "isBoss": false,
+          "loot": [
+            "Azynthian Armguards",
+            "Bread",
+            "Cloth Gloves",
+            "Cloth Pants",
+            "Cloth Shirt",
+            "Cloth Shoes",
+            "Cloth Sleeves",
+            "Gift of Azynthi",
+            "Luminstone",
+            "Riftsnare Gem",
+            "Spell Scroll: Infernis",
+            "Star Stone",
+            "Vampire Fang",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Vos Ashlyn",
+          "normalizedName": "vos ashlyn",
+          "minLevel": 38,
+          "maxLevel": 38,
+          "isBoss": false,
+          "loot": [
+            "Cloth Gloves",
+            "Cloth Hood",
+            "Cloth Shoes",
+            "Cloth Sleeves",
+            "Riftsnare Gem",
+            "Spell Scroll: Annihilate",
+            "Spell Scroll: Tenebris"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Planar Crawler",
           "normalizedName": "planar crawler",
           "minLevel": 40,
@@ -963,6 +1093,46 @@
       ]
     },
     {
+      "name": "Bellwain Island",
+      "levelRange": "15-15",
+      "isDungeon": false,
+      "npcs": [
+        {
+          "name": "Bellsie Belwain",
+          "normalizedName": "bellsie belwain",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Captain Bellwain",
+          "normalizedName": "captain bellwain",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Shady Fisherman",
+          "normalizedName": "shady fisherman",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        }
+      ]
+    },
+    {
       "name": "Blacksalt Strand",
       "levelRange": "10-24",
       "isDungeon": false,
@@ -972,6 +1142,42 @@
           "normalizedName": "a brackish croc",
           "minLevel": 1,
           "maxLevel": 1,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Mature Grass Spider",
+          "normalizedName": "a mature grass spider",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Felthir Bumbers",
+          "normalizedName": "felthir bumbers",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Gary Truoe",
+          "normalizedName": "gary truoe",
+          "minLevel": 8,
+          "maxLevel": 8,
           "isBoss": false,
           "loot": [],
           "questsGiven": [],
@@ -1530,6 +1736,17 @@
           "questItems": []
         },
         {
+          "name": "Remnant",
+          "normalizedName": "remnant",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Bloom Preserver",
           "normalizedName": "bloom preserver",
           "minLevel": 27,
@@ -1745,6 +1962,26 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Brittle Skeleton",
+          "normalizedName": "a brittle skeleton",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Rusty Shortsword",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Pierson Obero",
           "normalizedName": "pierson obero",
           "minLevel": 15,
@@ -1857,6 +2094,72 @@
           "questItems": []
         },
         {
+          "name": "Braxon Bastion",
+          "normalizedName": "braxon bastion",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Dulu",
+          "normalizedName": "braxon dulu",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Iphi",
+          "normalizedName": "braxon iphi",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Jaylan",
+          "normalizedName": "braxon jaylan",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Kylith",
+          "normalizedName": "braxon kylith",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Manfred",
+          "normalizedName": "braxon manfred",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Braxon Niman",
           "normalizedName": "braxon niman",
           "minLevel": 18,
@@ -1870,6 +2173,28 @@
         {
           "name": "Braxon Picalo",
           "normalizedName": "braxon picalo",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Sharva",
+          "normalizedName": "braxon sharva",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Theio",
+          "normalizedName": "braxon theio",
           "minLevel": 18,
           "maxLevel": 18,
           "isBoss": false,
@@ -2193,6 +2518,17 @@
           "questItems": []
         },
         {
+          "name": "Braxon Elden",
+          "normalizedName": "braxon elden",
+          "minLevel": 36,
+          "maxLevel": 36,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Assassin of Sivakaya",
           "normalizedName": "assassin of sivakaya",
           "minLevel": 38,
@@ -2430,6 +2766,40 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Brittle Skeleton",
+          "normalizedName": "a brittle skeleton",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Rusty Shortsword",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Grass Spider",
+          "normalizedName": "a grass spider",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Young Wolf",
           "normalizedName": "a young wolf",
           "minLevel": 2,
@@ -2450,6 +2820,43 @@
           "isBoss": false,
           "loot": [
             "Bear Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Sturdy Skeleton",
+          "normalizedName": "a sturdy skeleton",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Copper Sword",
+            "Light Plate Breastplate",
+            "Light Plate Greaves",
+            "Rotwood Bow",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Alpha Wolf",
+          "normalizedName": "alpha wolf",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat",
+            "Worn Wolf Collar"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -2488,6 +2895,35 @@
           "questItems": []
         },
         {
+          "name": "A Skeleton Soldier",
+          "normalizedName": "a skeleton soldier",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Polished Longsword",
+            "Rotting Cudgel",
+            "Rotwood Bow",
+            "Skeleton Eye",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Peony Shalmo",
+          "normalizedName": "peony shalmo",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Grizzlepaw",
           "normalizedName": "grizzlepaw",
           "minLevel": 9,
@@ -2497,6 +2933,25 @@
             "Bear Meat",
             "Stalwart Belt",
             "Weathered Chain"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Bassalt Vallano",
+          "normalizedName": "bassalt vallano",
+          "minLevel": 10,
+          "maxLevel": 10,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Backplate",
+            "Blue Leather Boots",
+            "Note to Liam",
+            "Polished Longsword",
+            "Skeleton Eye",
+            "Star Stone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -2545,12 +3000,47 @@
           "questItems": []
         },
         {
+          "name": "Pierson Obero",
+          "normalizedName": "pierson obero",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Valrae Cleary",
           "normalizedName": "valrae cleary",
           "minLevel": 15,
           "maxLevel": 15,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Worn Ancient Guardian",
+          "normalizedName": "worn ancient guardian",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [
+            "Aged Ring of Barriers",
+            "Ancient Golem Stone",
+            "Ancient Guardian Boots",
+            "Ancient Guardian Bracer",
+            "Ancient Guardian Gloves",
+            "Ancient Guardian Helm",
+            "Ancient Guardian Legplates",
+            "Ancient Guardian Plate",
+            "Ancient Guardian Sleeve",
+            "Diamond",
+            "Luminstone",
+            "Rock"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -2643,6 +3133,17 @@
       "levelRange": "29-35",
       "isDungeon": true,
       "npcs": [
+        {
+          "name": "Elemental Energy",
+          "normalizedName": "elemental energy",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "Braxon Prospect",
           "normalizedName": "braxon prospect",
@@ -3022,6 +3523,64 @@
           "questItems": []
         },
         {
+          "name": "Grassland Ogre Gatherer",
+          "normalizedName": "grassland ogre gatherer",
+          "minLevel": 3,
+          "maxLevel": 3,
+          "isBoss": false,
+          "loot": [
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Brown Bear Cub",
+          "normalizedName": "a brown bear cub",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Bear Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Mature Grass Spider",
+          "normalizedName": "a mature grass spider",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Brown Bear",
+          "normalizedName": "a brown bear",
+          "minLevel": 7,
+          "maxLevel": 7,
+          "isBoss": false,
+          "loot": [
+            "Bear Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Grassland Ogre Elder",
           "normalizedName": "a grassland ogre elder",
           "minLevel": 8,
@@ -3060,6 +3619,30 @@
           "maxLevel": 8,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Brandt Harbar",
+          "normalizedName": "brandt harbar",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Dryad Spirit",
+          "normalizedName": "dryad spirit",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Essence of Nature"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -3104,6 +3687,19 @@
           "maxLevel": 8,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Spectral Bear",
+          "normalizedName": "spectral bear",
+          "minLevel": 9,
+          "maxLevel": 9,
+          "isBoss": false,
+          "loot": [
+            "Essence of Nature"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -3160,6 +3756,17 @@
             "Sea Glass",
             "Seaweed"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Azure Guard",
+          "normalizedName": "azure guard",
+          "minLevel": 12,
+          "maxLevel": 12,
+          "isBoss": false,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -3244,6 +3851,29 @@
           "maxLevel": 15,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Rottenfoot Swampwalker",
+          "normalizedName": "rottenfoot swampwalker",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [
+            "A Husselfish",
+            "A Worm Eel",
+            "Coral",
+            "Muck Ball",
+            "Petrified Club",
+            "Runewoven Bracer",
+            "Sea Glass",
+            "Seaweed",
+            "Spell Scroll: Expose Weakness",
+            "Spell Scroll: Winter's Bite",
+            "Swampy Loincloth"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -3385,6 +4015,17 @@
           "questItems": []
         },
         {
+          "name": "Lieutenant Ulrik",
+          "normalizedName": "lieutenant ulrik",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Thomson Rhett",
           "normalizedName": "thomson rhett",
           "minLevel": 25,
@@ -3426,6 +4067,32 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        },
+        {
+          "name": "Sylvan Giant",
+          "normalizedName": "sylvan giant",
+          "minLevel": 32,
+          "maxLevel": 32,
+          "isBoss": false,
+          "loot": [
+            "Arboreal Cape",
+            "Sylvan Giant's Blood",
+            "Woodland Gauntlets"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Spirit of the Willow",
+          "normalizedName": "spirit of the willow",
+          "minLevel": 35,
+          "maxLevel": 35,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
@@ -3443,6 +4110,19 @@
           "loot": [
             "Pristine Grass Spider Carapace",
             "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Young Wolf",
+          "normalizedName": "a young wolf",
+          "minLevel": 2,
+          "maxLevel": 2,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -3743,9 +4423,29 @@
     },
     {
       "name": "Island Tomb",
-      "levelRange": "3-26",
+      "levelRange": "1-99",
       "isDungeon": true,
       "npcs": [
+        {
+          "name": "A Brittle Skeleton",
+          "normalizedName": "a brittle skeleton",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Rusty Shortsword",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "An Enraged Spirit",
           "normalizedName": "an enraged spirit",
@@ -3770,6 +4470,19 @@
             "Spell Scroll: Minor Healing",
             "Spell Scroll: Summon Cursed Fawn",
             "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Brown Bear Cub",
+          "normalizedName": "a brown bear cub",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Bear Meat"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -3972,6 +4685,97 @@
           "questItems": []
         },
         {
+          "name": "Daggerlegs",
+          "normalizedName": "daggerlegs",
+          "minLevel": 21,
+          "maxLevel": 21,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Citrine Stone",
+            "Concentration Band",
+            "Demon Claw",
+            "Diamond",
+            "Freeing Stone",
+            "Luminstone",
+            "Polished Stone",
+            "Ruby",
+            "Sea Glass",
+            "Shadowmaker"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Dire Wolf",
+          "normalizedName": "dire wolf",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Dream",
+          "normalizedName": "dream",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Ancient Fang",
+            "Bear Meat",
+            "Chewed Armwraps",
+            "Dreamy Wand"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Fright",
+          "normalizedName": "fright",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Citrine Stone",
+            "Concentration Band",
+            "Demon Claw",
+            "Diamond",
+            "Freeing Stone",
+            "Luminstone",
+            "Polished Stone",
+            "Ruby",
+            "Sea Glass",
+            "Shadowmaker"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Headless",
+          "normalizedName": "headless",
+          "minLevel": 24,
+          "maxLevel": 24,
+          "isBoss": false,
+          "loot": [
+            "Aetheria",
+            "Bread",
+            "Ruby",
+            "Unholy Bonesaw"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Soul Linked Spider",
           "normalizedName": "soul linked spider",
           "minLevel": 24,
@@ -3984,6 +4788,31 @@
             "Shadowed Key",
             "Spiderskin Shroud"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Dire Huntress",
+          "normalizedName": "dire huntress",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [
+            "Collar of the Huntress",
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Phantom'S Ward",
+          "normalizedName": "phantoms ward",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -4003,6 +4832,22 @@
             "Shadow Helm",
             "Thief of Breath",
             "Trembling Chain"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Occuphage, Eater of Eyes",
+          "normalizedName": "occuphage eater of eyes",
+          "minLevel": 99,
+          "maxLevel": 99,
+          "isBoss": false,
+          "loot": [
+            "A Worm Eel",
+            "Nagalok Claw",
+            "Reptilian Scales",
+            "Seaweed"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -4227,6 +5072,17 @@
           "questItems": []
         },
         {
+          "name": "A Memory of Sivakaya",
+          "normalizedName": "a memory of sivakaya",
+          "minLevel": 99,
+          "maxLevel": 99,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Ward of Piety",
           "normalizedName": "ward of piety",
           "minLevel": 99,
@@ -4302,6 +5158,36 @@
           "questItems": []
         },
         {
+          "name": "Katia Marado",
+          "normalizedName": "katia marado",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Larviso Poltir",
+          "normalizedName": "larviso poltir",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Nashen Glazier",
           "normalizedName": "nashen glazier",
           "minLevel": 22,
@@ -4363,6 +5249,21 @@
           "questsTurnIn": [
             "Ritual Components"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Wardkeeper Rossi",
+          "normalizedName": "wardkeeper rossi",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -4808,6 +5709,20 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Mature Grass Spider",
+          "normalizedName": "a mature grass spider",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Lost Soul",
           "normalizedName": "lost soul",
           "minLevel": 4,
@@ -4828,12 +5743,70 @@
           "questItems": []
         },
         {
+          "name": "Vithean Elemental",
+          "normalizedName": "vithean elemental",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Vithean Ore"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Olden Lennova",
+          "normalizedName": "olden lennova",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Thomson Rhett",
           "normalizedName": "thomson rhett",
           "minLevel": 15,
           "maxLevel": 15,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Priel Deceiver",
+          "normalizedName": "priel deceiver",
+          "minLevel": 17,
+          "maxLevel": 17,
+          "isBoss": false,
+          "loot": [
+            "Priel Officer's Ring",
+            "Sea Glass",
+            "Seaspice",
+            "Star Stone",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Priel Enforcer",
+          "normalizedName": "priel enforcer",
+          "minLevel": 17,
+          "maxLevel": 17,
+          "isBoss": false,
+          "loot": [
+            "Priel Officer's Ring",
+            "Sea Glass",
+            "Seaspice",
+            "Star Stone",
+            "Water"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -4920,6 +5893,20 @@
           "questItems": []
         },
         {
+          "name": "Captured Molorath",
+          "normalizedName": "captured molorath",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Ivory Tusk",
+            "Malaroth Hide"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Mature Malaroth",
           "normalizedName": "mature malaroth",
           "minLevel": 22,
@@ -4950,6 +5937,21 @@
           "questItems": []
         },
         {
+          "name": "Loomingwood Minotaur Soldier",
+          "normalizedName": "loomingwood minotaur soldier",
+          "minLevel": 23,
+          "maxLevel": 23,
+          "isBoss": false,
+          "loot": [
+            "Blueprint: Loomingwood Market",
+            "Blueprint: Loomingwood Shrine",
+            "Mino Hatchet"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Tiallia Priel",
           "normalizedName": "tiallia priel",
           "minLevel": 24,
@@ -4968,6 +5970,35 @@
           "questItems": []
         },
         {
+          "name": "Loomingwood Minotaur",
+          "normalizedName": "loomingwood minotaur",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [
+            "Blueprint: Loomingwood Market",
+            "Blueprint: Loomingwood Shrine"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Loomingwood Minotaur Legionnaire",
+          "normalizedName": "loomingwood minotaur legionnaire",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Blueprint: Loomingwood Market",
+            "Blueprint: Loomingwood Shrine",
+            "Mino Hatchet"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Shivunax",
           "normalizedName": "shivunax",
           "minLevel": 26,
@@ -4979,6 +6010,17 @@
             "Malaroth Hide",
             "Malaroth Sinew Cord"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Solunarian Protector",
+          "normalizedName": "solunarian protector",
+          "minLevel": 37,
+          "maxLevel": 37,
+          "isBoss": false,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -5004,9 +6046,44 @@
     },
     {
       "name": "Mysterious Portals",
-      "levelRange": "8-38",
+      "levelRange": "5-45",
       "isDungeon": true,
       "npcs": [
+        {
+          "name": "Catnip (enemy)",
+          "normalizedName": "catnip enemy",
+          "minLevel": 5,
+          "maxLevel": 5,
+          "isBoss": false,
+          "loot": [
+            "Catnip"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Malignant Thoughts",
+          "normalizedName": "malignant thoughts",
+          "minLevel": 5,
+          "maxLevel": 5,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "The Conductor",
+          "normalizedName": "the conductor",
+          "minLevel": 5,
+          "maxLevel": 5,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "Dream Invader",
           "normalizedName": "dream invader",
@@ -5093,6 +6170,22 @@
             "Remnants of a Nightmare",
             "Small Engraved Compass",
             "Twilight Belt"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Fungal Drone",
+          "normalizedName": "a fungal drone",
+          "minLevel": 17,
+          "maxLevel": 17,
+          "isBoss": false,
+          "loot": [
+            "A Fanged Caveskimmer",
+            "A Twisted Spider Leg",
+            "Fungal Spore",
+            "Luminstone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -5236,6 +6329,17 @@
           "questItems": []
         },
         {
+          "name": "Solunarian Protector",
+          "normalizedName": "solunarian protector",
+          "minLevel": 37,
+          "maxLevel": 37,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Hypnic",
           "normalizedName": "hypnic",
           "minLevel": 38,
@@ -5248,6 +6352,19 @@
             "Planar Stone Shards",
             "Ring of Echoes",
             "Small Cat Statue"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Azynthi, Corruptor of Gods",
+          "normalizedName": "azynthi corruptor of gods",
+          "minLevel": 45,
+          "maxLevel": 45,
+          "isBoss": false,
+          "loot": [
+            "Stolen Memories"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -6144,8 +7261,41 @@
           "questItems": []
         },
         {
+          "name": "Adalia Brown",
+          "normalizedName": "adalia brown",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Aldo Bernes",
+          "normalizedName": "aldo bernes",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Bella Macmonalle",
           "normalizedName": "bella macmonalle",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Lolo",
+          "normalizedName": "braxon lolo",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -6199,6 +7349,17 @@
           "questItems": []
         },
         {
+          "name": "Caroline Langley",
+          "normalizedName": "caroline langley",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Chazz Pillot",
           "normalizedName": "chazz pillot",
           "minLevel": 8,
@@ -6211,6 +7372,28 @@
           "questsTurnIn": [
             "A Note for C. Pillot"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Chell Rezza",
+          "normalizedName": "chell rezza",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Dalaro West",
+          "normalizedName": "dalaro west",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -6269,8 +7452,52 @@
           "questItems": []
         },
         {
+          "name": "Fredrick Templestone",
+          "normalizedName": "fredrick templestone",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Grady Thornox",
           "normalizedName": "grady thornox",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Harvey Alder",
+          "normalizedName": "harvey alder",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Innkeeper Ryvan",
+          "normalizedName": "innkeeper ryvan",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Isaac Salaman",
+          "normalizedName": "isaac salaman",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -6293,8 +7520,41 @@
           "questItems": []
         },
         {
+          "name": "Kalia Murphy",
+          "normalizedName": "kalia murphy",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Kimber Greening",
+          "normalizedName": "kimber greening",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Laiey Foster",
           "normalizedName": "laiey foster",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Liani Bosh",
+          "normalizedName": "liani bosh",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -6318,8 +7578,63 @@
           "questItems": []
         },
         {
+          "name": "Roreli Gilmare",
+          "normalizedName": "roreli gilmare",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Rory Gilmare",
+          "normalizedName": "rory gilmare",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Sammy Asturllo",
           "normalizedName": "sammy asturllo",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Terlie Rossman",
+          "normalizedName": "terlie rossman",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Thomas Lorning",
+          "normalizedName": "thomas lorning",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Town Crier",
+          "normalizedName": "town crier",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -6341,6 +7656,28 @@
           "questsTurnIn": [
             "A Magical Sword in Port Azure"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Ubal Rousha",
+          "normalizedName": "ubal rousha",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Vik Sorenson",
+          "normalizedName": "vik sorenson",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -6383,6 +7720,21 @@
           "maxLevel": 11,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Spark Beetle",
+          "normalizedName": "spark beetle",
+          "minLevel": 11,
+          "maxLevel": 11,
+          "isBoss": false,
+          "loot": [
+            "Droplet of Lava",
+            "Flint Carapace",
+            "Luminstone"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -6480,6 +7832,17 @@
           "questItems": []
         },
         {
+          "name": "Shady Fisherman",
+          "normalizedName": "shady fisherman",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Vethalo Gala",
           "normalizedName": "vethalo gala",
           "minLevel": 15,
@@ -6507,6 +7870,17 @@
             "Repairing Orion's Ring",
             "Repairing Orion's Ring, Part 2"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Prichard Zemoro",
+          "normalizedName": "prichard zemoro",
+          "minLevel": 17,
+          "maxLevel": 17,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -6582,6 +7956,17 @@
           "questsTurnIn": [
             "Orion Mycon's Lost Ring"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Prestigio Valusha",
+          "normalizedName": "prestigio valusha",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -6798,6 +8183,17 @@
             "Sea Glass",
             "Star Stone"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Styria Olafur",
+          "normalizedName": "styria olafur",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -7185,7 +8581,7 @@
     },
     {
       "name": "Reliquary Hall",
-      "levelRange": "5-16",
+      "levelRange": "5-25",
       "isDungeon": false,
       "npcs": [
         {
@@ -7211,6 +8607,17 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        },
+        {
+          "name": "A Wisp",
+          "normalizedName": "a wisp",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
@@ -7219,6 +8626,53 @@
       "levelRange": "4-35",
       "isDungeon": false,
       "npcs": [
+        {
+          "name": "A Mature Grass Spider",
+          "normalizedName": "a mature grass spider",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Teodor Smart",
+          "normalizedName": "teodor smart",
+          "minLevel": 7,
+          "maxLevel": 7,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Comstock Retalio",
+          "normalizedName": "comstock retalio",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Goldie Retalio",
+          "normalizedName": "goldie retalio",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "Leena Halsted",
           "normalizedName": "leena halsted",
@@ -7233,12 +8687,113 @@
           "questItems": []
         },
         {
+          "name": "Oscar Vanellis",
+          "normalizedName": "oscar vanellis",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Dusty Mcphenn",
+          "normalizedName": "dusty mcphenn",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Adonalle Thistlewich",
           "normalizedName": "adonalle thistlewich",
           "minLevel": 22,
           "maxLevel": 22,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Cleric",
+          "normalizedName": "sivakayan cleric",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Sceptre",
+            "Sivakayan Shield",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Raider",
+          "normalizedName": "sivakayan raider",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Straightsword",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Reaver",
+          "normalizedName": "sivakayan reaver",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Axe",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Straightsword",
+            "Spell Scroll: Enfeeble",
+            "Spell Scroll: Mutual Torment",
+            "Spell Scroll: Void Rend",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Ripper Soldier",
+          "normalizedName": "ripper soldier",
+          "minLevel": 27,
+          "maxLevel": 27,
+          "isBoss": false,
+          "loot": [
+            "Ripparian Axe",
+            "Ripparian Greaves",
+            "Ripparian Plate",
+            "Ripparian Soldier Helm",
+            "Ripper Insignia Badge"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -7509,6 +9064,28 @@
           "maxLevel": 18,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Stoneman",
+          "normalizedName": "stoneman",
+          "minLevel": 19,
+          "maxLevel": 19,
+          "isBoss": false,
+          "loot": [
+            "Blueprint: Stone Auction",
+            "Blueprint: Stone Bank",
+            "Blueprint: Stone Dining",
+            "Blueprint: Stone Fountain",
+            "Blueprint: Stone Training Room",
+            "Blueprint: Stone Vendor",
+            "Diamond",
+            "Polished Stone",
+            "Ruby",
+            "Stone Sword"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -8107,6 +9684,22 @@
           "questItems": []
         },
         {
+          "name": "A Fungal Drone",
+          "normalizedName": "a fungal drone",
+          "minLevel": 17,
+          "maxLevel": 17,
+          "isBoss": false,
+          "loot": [
+            "A Fanged Caveskimmer",
+            "A Twisted Spider Leg",
+            "Fungal Spore",
+            "Luminstone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Lurk",
           "normalizedName": "lurk",
           "minLevel": 19,
@@ -8116,6 +9709,37 @@
             "Chewed Helmet",
             "Gator Gloves",
             "Muck Ball"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Poacher",
+          "normalizedName": "poacher",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Cleric",
+          "normalizedName": "sivakayan cleric",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Sceptre",
+            "Sivakayan Shield",
+            "Star Stone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -8134,6 +9758,29 @@
             "Sivakayan Ore",
             "Sivakayan Plate",
             "Sivakayan Straightsword",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Reaver",
+          "normalizedName": "sivakayan reaver",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Axe",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Straightsword",
+            "Spell Scroll: Enfeeble",
+            "Spell Scroll: Mutual Torment",
+            "Spell Scroll: Void Rend",
             "Star Stone"
           ],
           "questsGiven": [],
@@ -8179,9 +9826,65 @@
     },
     {
       "name": "Secluded Sanctuary",
-      "levelRange": "41-42",
+      "levelRange": "40-50",
       "isDungeon": false,
       "npcs": [
+        {
+          "name": "Shadow of Brax",
+          "normalizedName": "shadow of brax",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Shadow of Fernalla",
+          "normalizedName": "shadow of fernalla",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Shadow of Soluna",
+          "normalizedName": "shadow of soluna",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Shadow of Vitheo",
+          "normalizedName": "shadow of vitheo",
+          "minLevel": 40,
+          "maxLevel": 40,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "Azynthian Keeper",
           "normalizedName": "azynthian keeper",
@@ -8209,6 +9912,17 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        },
+        {
+          "name": "Shattered Sivakaya",
+          "normalizedName": "shattered sivakaya",
+          "minLevel": 50,
+          "maxLevel": 50,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
@@ -8218,8 +9932,40 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "Bridgekeeper",
+          "normalizedName": "bridgekeeper",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Cloth Gloves",
+            "Cloth Hood",
+            "Cloth Shoes",
+            "Cloth Sleeves"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Curator",
           "normalizedName": "curator",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Cloth Gloves",
+            "Cloth Hood",
+            "Cloth Shoes",
+            "Cloth Sleeves"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Gatekeeper",
+          "normalizedName": "gatekeeper",
           "minLevel": 1,
           "maxLevel": 1,
           "isBoss": false,
@@ -8309,6 +10055,19 @@
             "Ruby",
             "Sea Glass",
             "Shadowmaker"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Founder",
+          "normalizedName": "founder",
+          "minLevel": 21,
+          "maxLevel": 21,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -8490,6 +10249,17 @@
           "questItems": []
         },
         {
+          "name": "Outgrown Terror",
+          "normalizedName": "outgrown terror",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "The Hider",
           "normalizedName": "the hider",
           "minLevel": 30,
@@ -8501,8 +10271,97 @@
           "questItems": []
         },
         {
+          "name": "Cackles",
+          "normalizedName": "cackles",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Crankles",
+          "normalizedName": "crankles",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Jack",
+          "normalizedName": "jack",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Rumors",
+          "normalizedName": "rumors",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Skelunker",
+          "normalizedName": "skelunker",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sockets",
+          "normalizedName": "sockets",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Vithean Brick"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Enterprising Spirit",
           "normalizedName": "enterprising spirit",
+          "minLevel": 35,
+          "maxLevel": 35,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Kio the Light Keeper",
+          "normalizedName": "kio the light keeper",
           "minLevel": 35,
           "maxLevel": 35,
           "isBoss": false,
@@ -8546,6 +10405,61 @@
             "Tattered Leather Sleeves",
             "Tattered Leather Tunic"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Albixt Munger",
+          "normalizedName": "albixt munger",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Garrison Victoza",
+          "normalizedName": "garrison victoza",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Jason Garlorn",
+          "normalizedName": "jason garlorn",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Reginald Flomb",
+          "normalizedName": "reginald flomb",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Bea Thornfist",
+          "normalizedName": "bea thornfist",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -8646,6 +10560,21 @@
           "questItems": []
         },
         {
+          "name": "Edgar Taether",
+          "normalizedName": "edgar taether",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Gasper Bulksh",
           "normalizedName": "gasper bulksh",
           "minLevel": 22,
@@ -8709,6 +10638,21 @@
         {
           "name": "Servash Polaro",
           "normalizedName": "servash polaro",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Uther Oledes",
+          "normalizedName": "uther oledes",
           "minLevel": 22,
           "maxLevel": 22,
           "isBoss": false,
@@ -9084,6 +11028,17 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "Verdant Energy",
+          "normalizedName": "verdant energy",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Heileigh Serenie",
           "normalizedName": "heileigh serenie",
           "minLevel": 6,
@@ -9117,6 +11072,28 @@
           "questItems": []
         },
         {
+          "name": "Beth Constantine",
+          "normalizedName": "beth constantine",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Jerrod Tunsillo",
+          "normalizedName": "jerrod tunsillo",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Valrae Cleary",
           "normalizedName": "valrae cleary",
           "minLevel": 15,
@@ -9138,6 +11115,39 @@
           "normalizedName": "granderson jovich",
           "minLevel": 20,
           "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Marcus Linera",
+          "normalizedName": "marcus linera",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Natalia Linera",
+          "normalizedName": "natalia linera",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Illian Asboth",
+          "normalizedName": "illian asboth",
+          "minLevel": 22,
+          "maxLevel": 22,
           "isBoss": false,
           "loot": [],
           "questsGiven": [],
@@ -9458,6 +11468,19 @@
           "questItems": []
         },
         {
+          "name": "A Young Wolf",
+          "normalizedName": "a young wolf",
+          "minLevel": 2,
+          "maxLevel": 2,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Islander Bandit",
           "normalizedName": "islander bandit",
           "minLevel": 2,
@@ -9496,6 +11519,19 @@
           "questItems": []
         },
         {
+          "name": "A Brown Bear Cub",
+          "normalizedName": "a brown bear cub",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Bear Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Vevillo Polter",
           "normalizedName": "vevillo polter",
           "minLevel": 4,
@@ -9517,6 +11553,17 @@
           "questItems": []
         },
         {
+          "name": "Captain Genevieve Voldance",
+          "normalizedName": "captain genevieve voldance",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Cecil Threbb",
           "normalizedName": "cecil threbb",
           "minLevel": 6,
@@ -9532,6 +11579,17 @@
         {
           "name": "Saya Seawatcher",
           "normalizedName": "saya seawatcher",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Wally Waldorf",
+          "normalizedName": "wally waldorf",
           "minLevel": 6,
           "maxLevel": 6,
           "isBoss": false,
@@ -9589,6 +11647,17 @@
           "questItems": []
         },
         {
+          "name": "Alice Hewer",
+          "normalizedName": "alice hewer",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Bella Macmonalle",
           "normalizedName": "bella macmonalle",
           "minLevel": 8,
@@ -9626,6 +11695,17 @@
         {
           "name": "Davidson Malarky",
           "normalizedName": "davidson malarky",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Desmond Shaffer",
+          "normalizedName": "desmond shaffer",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -9679,6 +11759,17 @@
           "questItems": []
         },
         {
+          "name": "Kezeal the Goat",
+          "normalizedName": "kezeal the goat",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Kio the Light Keeper",
           "normalizedName": "kio the light keeper",
           "minLevel": 8,
@@ -9715,8 +11806,63 @@
           "questItems": []
         },
         {
+          "name": "Percy Ildia",
+          "normalizedName": "percy ildia",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Samuel Thatcher",
           "normalizedName": "samuel thatcher",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Timothy Allorn",
+          "normalizedName": "timothy allorn",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Town Crier",
+          "normalizedName": "town crier",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Tracy Aldern",
+          "normalizedName": "tracy aldern",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Treven Pines",
+          "normalizedName": "treven pines",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
@@ -9730,6 +11876,28 @@
           "normalizedName": "zachary yelmee",
           "minLevel": 8,
           "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Aldoa Manday",
+          "normalizedName": "aldoa manday",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Amanda Rostley",
+          "normalizedName": "amanda rostley",
+          "minLevel": 15,
+          "maxLevel": 15,
           "isBoss": false,
           "loot": [],
           "questsGiven": [],
@@ -9765,6 +11933,17 @@
             "Aragath's Imprisonment",
             "Destroying Aragath"
           ],
+          "questItems": []
+        },
+        {
+          "name": "Neziroth Daggerhart",
+          "normalizedName": "neziroth daggerhart",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
           "questItems": []
         },
         {
@@ -9834,6 +12013,49 @@
           ]
         },
         {
+          "name": "Garrey Ambrose",
+          "normalizedName": "garrey ambrose",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Jan Yarrow",
+          "normalizedName": "jan yarrow",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Lucian Revald",
+          "normalizedName": "lucian revald",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Nylith Valorro",
           "normalizedName": "nylith valorro",
           "minLevel": 22,
@@ -9850,8 +12072,62 @@
           "questItems": []
         },
         {
+          "name": "Revan Gavault",
+          "normalizedName": "revan gavault",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Staggy Garth",
+          "normalizedName": "staggy garth",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Validus Greencent",
+          "normalizedName": "validus greencent",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Wisp",
           "normalizedName": "a wisp",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Amethi Plazzo",
+          "normalizedName": "amethi plazzo",
           "minLevel": 25,
           "maxLevel": 25,
           "isBoss": false,
@@ -9924,6 +12200,17 @@
           "questItems": []
         },
         {
+          "name": "Sergeant D'Vinn",
+          "normalizedName": "sergeant dvinn",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Undying Light",
           "normalizedName": "undying light",
           "minLevel": 25,
@@ -9971,6 +12258,58 @@
       "levelRange": "25-35",
       "isDungeon": false,
       "npcs": [
+        {
+          "name": "Braxon Fanatic",
+          "normalizedName": "braxon fanatic",
+          "minLevel": 17,
+          "maxLevel": 17,
+          "isBoss": false,
+          "loot": [
+            "A Lost Poem (1)",
+            "A Lost Poem (2)",
+            "A Lost Poem (3)",
+            "Desert Silk Sleeves",
+            "Ember Acolyte",
+            "Luminstone",
+            "Peon",
+            "Polished Stone",
+            "Shroud of Barriers",
+            "Spell Scroll: Call of the Void",
+            "Spell Scroll: Ice Spear",
+            "Spell Scroll: Immolation",
+            "Spell Scroll: Sleep",
+            "Spell Scroll: Winter's Bite",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Braxon Pliades",
+          "normalizedName": "braxon pliades",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Stoneman Seeker",
+          "normalizedName": "stoneman seeker",
+          "minLevel": 18,
+          "maxLevel": 18,
+          "isBoss": false,
+          "loot": [
+            "Polished Stone",
+            "Pulsating Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "Wishlan the Savior",
           "normalizedName": "wishlan the savior",
@@ -10289,6 +12628,49 @@
       "isDungeon": true,
       "npcs": [
         {
+          "name": "A Brittle Skeleton",
+          "normalizedName": "a brittle skeleton",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Rusty Shortsword",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Sturdy Skeleton",
+          "normalizedName": "a sturdy skeleton",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Copper Sword",
+            "Light Plate Breastplate",
+            "Light Plate Greaves",
+            "Rotwood Bow",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Neophyte Necromancer",
           "normalizedName": "neophyte necromancer",
           "minLevel": 7,
@@ -10438,6 +12820,67 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Brown Bear Cub",
+          "normalizedName": "a brown bear cub",
+          "minLevel": 4,
+          "maxLevel": 4,
+          "isBoss": false,
+          "loot": [
+            "Bear Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Alexandria Boattez",
+          "normalizedName": "alexandria boattez",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Boshi Polok",
+          "normalizedName": "boshi polok",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Kylie Clark",
+          "normalizedName": "kylie clark",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Rylith Orthia",
+          "normalizedName": "rylith orthia",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Brown Bear",
           "normalizedName": "a brown bear",
           "minLevel": 7,
@@ -10562,6 +13005,55 @@
           "questItems": []
         },
         {
+          "name": "An Immature Nagalok",
+          "normalizedName": "an immature nagalok",
+          "minLevel": 14,
+          "maxLevel": 14,
+          "isBoss": false,
+          "loot": [
+            "A Worm Eel",
+            "Nagalok Claw",
+            "Reptilian Scales",
+            "Seaweed"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Odyss Repman",
+          "normalizedName": "odyss repman",
+          "minLevel": 14,
+          "maxLevel": 14,
+          "isBoss": false,
+          "loot": [
+            "Brackwood Mace",
+            "Daggerhart Ancestral Coin",
+            "Islander Bandit Armwrap",
+            "Light Plate Breastplate",
+            "Spell Scroll: Brax's Touch",
+            "Spell Scroll: Magic Bolt",
+            "Spell Scroll: Minor Healing",
+            "Spell Scroll: Minor Lightning",
+            "Spell Scroll: Minor Regen",
+            "Spell Scroll: Tangle"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Addelia Zurin",
+          "normalizedName": "addelia zurin",
+          "minLevel": 15,
+          "maxLevel": 15,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Molorai Archaeologist",
           "normalizedName": "molorai archaeologist",
           "minLevel": 16,
@@ -10630,6 +13122,56 @@
           "questItems": []
         },
         {
+          "name": "Sprig Laisey",
+          "normalizedName": "sprig laisey",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [
+            "Bear Bone Club",
+            "Sea Glass",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Vanther Quansy",
+          "normalizedName": "vanther quansy",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Worn Ancient Guardian",
+          "normalizedName": "worn ancient guardian",
+          "minLevel": 20,
+          "maxLevel": 20,
+          "isBoss": false,
+          "loot": [
+            "Aged Ring of Barriers",
+            "Ancient Golem Stone",
+            "Ancient Guardian Boots",
+            "Ancient Guardian Bracer",
+            "Ancient Guardian Gloves",
+            "Ancient Guardian Helm",
+            "Ancient Guardian Legplates",
+            "Ancient Guardian Plate",
+            "Ancient Guardian Sleeve",
+            "Diamond",
+            "Luminstone",
+            "Rock"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Dusken Giant",
           "normalizedName": "dusken giant",
           "minLevel": 22,
@@ -10640,6 +13182,28 @@
             "Dusken Shield",
             "Dusken Staff"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Felden Veldspar",
+          "normalizedName": "felden veldspar",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Ivarest Hillsong",
+          "normalizedName": "ivarest hillsong",
+          "minLevel": 22,
+          "maxLevel": 22,
+          "isBoss": false,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -10662,6 +13226,38 @@
             "Molorai Battle Chain",
             "Star Stone",
             "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Faun Vulak",
+          "normalizedName": "faun vulak",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Malor Mara",
+          "normalizedName": "malor mara",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -10720,6 +13316,22 @@
           "questItems": []
         },
         {
+          "name": "Liam Kilfa",
+          "normalizedName": "liam kilfa",
+          "minLevel": 31,
+          "maxLevel": 31,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Ancient Educator",
           "normalizedName": "ancient educator",
           "minLevel": 33,
@@ -10764,6 +13376,103 @@
       "levelRange": "16-24",
       "isDungeon": true,
       "npcs": [
+        {
+          "name": "Gilmore Davids",
+          "normalizedName": "gilmore davids",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Mason Nichols",
+          "normalizedName": "mason nichols",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Miner Adams",
+          "normalizedName": "miner adams",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Miner Murphy",
+          "normalizedName": "miner murphy",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Richard Wreit",
+          "normalizedName": "richard wreit",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Roger Rivers",
+          "normalizedName": "roger rivers",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Serra Stiles",
+          "normalizedName": "serra stiles",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Highwayman Raider",
+          "normalizedName": "a highwayman raider",
+          "minLevel": 13,
+          "maxLevel": 13,
+          "isBoss": false,
+          "loot": [
+            "Bread",
+            "Gambler's Cape",
+            "Highwayman Pants",
+            "Luminstone",
+            "Ornate Toolbox",
+            "Star Stone",
+            "Sticky Gloves",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "A Deepling Lunarite",
           "normalizedName": "a deepling lunarite",
@@ -11063,6 +13772,21 @@
       "levelRange": "11-18",
       "isDungeon": true,
       "npcs": [
+        {
+          "name": "A Grassland Ogre Elder",
+          "normalizedName": "a grassland ogre elder",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Brackfruit Juice",
+            "Ogre Tooth Club",
+            "Water"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
         {
           "name": "A Grassland Ogre Sentinel",
           "normalizedName": "a grassland ogre sentinel",
@@ -11414,6 +14138,17 @@
       "isDungeon": true,
       "npcs": [
         {
+          "name": "Verdant Energy",
+          "normalizedName": "verdant energy",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Vithean Remains",
           "normalizedName": "vithean remains",
           "minLevel": 21,
@@ -11707,6 +14442,33 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Grass Spider",
+          "normalizedName": "a grass spider",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Young Wolf",
+          "normalizedName": "a young wolf",
+          "minLevel": 2,
+          "maxLevel": 2,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Mature Grass Spider",
           "normalizedName": "a mature grass spider",
           "minLevel": 4,
@@ -11772,12 +14534,120 @@
           "questItems": []
         },
         {
+          "name": "A Skeleton Captain",
+          "normalizedName": "a skeleton captain",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Light Plate Breastplate",
+            "Light Plate Greaves",
+            "Nightfall",
+            "Pg. 1: Faded Entry",
+            "Polished Longsword",
+            "Rotting Metal Shield",
+            "Skeleton Eye",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Skeleton Soldier",
+          "normalizedName": "a skeleton soldier",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Polished Longsword",
+            "Rotting Cudgel",
+            "Rotwood Bow",
+            "Skeleton Eye",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Urland Garry",
           "normalizedName": "urland garry",
           "minLevel": 8,
           "maxLevel": 8,
           "isBoss": false,
           "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Brackish Croc",
+          "normalizedName": "a brackish croc",
+          "minLevel": 9,
+          "maxLevel": 9,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Molorai Militia Arcanist",
+          "normalizedName": "molorai militia arcanist",
+          "minLevel": 9,
+          "maxLevel": 9,
+          "isBoss": false,
+          "loot": [
+            "Arcanist Cap",
+            "Citrine Stone",
+            "Luminstone",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Molorai Militia Druid",
+          "normalizedName": "molorai militia druid",
+          "minLevel": 9,
+          "maxLevel": 9,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Luminstone",
+            "Pathfinder's Staff",
+            "Shivering Leather Boots",
+            "Shivering Leather Leggings",
+            "Shivering Leather Skullcap",
+            "Shivering Leather Sleeves",
+            "Shivering Leather Tunic",
+            "Star Stone",
+            "Vinewrapped Vambracers"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Molorai Militia Warrior",
+          "normalizedName": "molorai militia warrior",
+          "minLevel": 9,
+          "maxLevel": 9,
+          "isBoss": false,
+          "loot": [
+            "Citrine Stone",
+            "Cold Steel Greaves",
+            "Cold Steel Helm",
+            "Linked Chain Shirt",
+            "Luminstone",
+            "Molorai Axe",
+            "Molorai Bow",
+            "Star Stone"
+          ],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -11950,6 +14820,53 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "A Brittle Skeleton",
+          "normalizedName": "a brittle skeleton",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Ancient Bone",
+            "Rusty Shortsword",
+            "Tattered Leather Boots",
+            "Tattered Leather Gloves",
+            "Tattered Leather Leggings",
+            "Tattered Leather Skullcap",
+            "Tattered Leather Sleeves",
+            "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Grass Spider",
+          "normalizedName": "a grass spider",
+          "minLevel": 1,
+          "maxLevel": 1,
+          "isBoss": false,
+          "loot": [
+            "Pristine Grass Spider Carapace",
+            "Ruined Grass Spider Carapace"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Young Wolf",
+          "normalizedName": "a young wolf",
+          "minLevel": 2,
+          "maxLevel": 2,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Grassland Ogre Gatherer",
           "normalizedName": "grassland ogre gatherer",
           "minLevel": 3,
@@ -12032,6 +14949,20 @@
             "Tattered Leather Skullcap",
             "Tattered Leather Sleeves",
             "Tattered Leather Tunic"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "A Priel Bandit Recruit",
+          "normalizedName": "a priel bandit recruit",
+          "minLevel": 6,
+          "maxLevel": 6,
+          "isBoss": false,
+          "loot": [
+            "Priel Insignia Ring",
+            "Priel Knife"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -12311,6 +15242,43 @@
       "isDungeon": false,
       "npcs": [
         {
+          "name": "Bommer Olvaro",
+          "normalizedName": "bommer olvaro",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Notes of a Hermit"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Clinton Vars",
+          "normalizedName": "clinton vars",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Liam Olvaro",
+          "normalizedName": "liam olvaro",
+          "minLevel": 8,
+          "maxLevel": 8,
+          "isBoss": false,
+          "loot": [
+            "Notes of a Hermit"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Seafiend Worker",
           "normalizedName": "a seafiend worker",
           "minLevel": 15,
@@ -12543,6 +15511,68 @@
             "Fungal Spore",
             "Fungus Covered Armband",
             "Silver Plated Leggings"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Cleric",
+          "normalizedName": "sivakayan cleric",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Sceptre",
+            "Sivakayan Shield",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Raider",
+          "normalizedName": "sivakayan raider",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Straightsword",
+            "Star Stone"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Sivakayan Reaver",
+          "normalizedName": "sivakayan reaver",
+          "minLevel": 26,
+          "maxLevel": 26,
+          "isBoss": false,
+          "loot": [
+            "Sea Glass",
+            "Sivakayan Axe",
+            "Sivakayan Bracer",
+            "Sivakayan Legplate",
+            "Sivakayan Ore",
+            "Sivakayan Plate",
+            "Sivakayan Straightsword",
+            "Spell Scroll: Enfeeble",
+            "Spell Scroll: Mutual Torment",
+            "Spell Scroll: Void Rend",
+            "Star Stone"
           ],
           "questsGiven": [],
           "questsTurnIn": [],

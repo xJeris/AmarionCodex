@@ -34,6 +34,17 @@ namespace AmarionCodex.Patches
                 return;
 
             EncounterTracker.Load(GameData.CurrentCharacterSlot.index);
+
+            // Auto-discover Reliquary Hall NPCs on zone entry.
+            // The Reliquary Ward and Fiend are one-time-per-account kills that
+            // despawn permanently, so grant discovery credit just for zoning in.
+            string scene = GameData.SceneName ?? "";
+            string zone = BestiaryDatabase.ResolveSceneToZone(scene);
+            if (zone == "Reliquary Hall")
+            {
+                EncounterTracker.Discover("reliquary ward", scene);
+                EncounterTracker.Discover("reliquary fiend", scene);
+            }
         }
     }
 }

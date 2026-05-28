@@ -6,7 +6,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 
 ## Features
 
-- **730 NPCs** across **43 zones** with loot tables, quest associations, and level data
+- **949 NPCs** across **44 zones** with loot tables, quest associations, and level data
 - Discover NPCs through combat (aggro), hailing, considering, or killing
 - Group and raid members trigger discoveries when NPCs aggro on them
 - Browse discovered entries organized by zone/dungeon with level ranges
