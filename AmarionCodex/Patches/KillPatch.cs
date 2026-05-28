@@ -27,11 +27,21 @@ namespace AmarionCodex.Patches
                 return;
 
             // Same credit check the game uses for XP
+            if (__instance.MyStats == null)
+            {
+                UnityEngine.Debug.LogWarning("[AmarionCodex] KillPatch: MyStats was null on " + (npc.NPCName ?? "unknown"));
+                return;
+            }
             int dmgFromPlayer = DmgFromPlayerSource(__instance);
             if (dmgFromPlayer <= __instance.MyStats.CurrentMaxHP / 2)
                 return;
 
             // Check player was in aggro table
+            if (npc.AggroTable == null)
+            {
+                UnityEngine.Debug.LogWarning("[AmarionCodex] KillPatch: AggroTable was null on " + (npc.NPCName ?? "unknown"));
+                return;
+            }
             bool playerInAggro = false;
             foreach (var slot in npc.AggroTable)
             {
@@ -50,6 +60,11 @@ namespace AmarionCodex.Patches
             if (GameData.KnowledgeDatabase == null)
                 return;
 
+            if (string.IsNullOrEmpty(npc.NPCName))
+            {
+                UnityEngine.Debug.LogWarning("[AmarionCodex] KillPatch: NPCName was null/empty");
+                return;
+            }
             string normalized = GameData.KnowledgeDatabase.Normalize(npc.NPCName);
             string currentZone = GameData.SceneName ?? "";
 

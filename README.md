@@ -70,6 +70,16 @@ Windows Defender may flag this DLL as a false positive. This is common for BepIn
 
 If flagged, add an exclusion for your `BepInEx/plugins/` folder in Windows Security settings.
 
+## Changelog
+
+### 0.2.1
+- Fixed crash caused by `SimPlayer.InRaid` not existing in retail builds (playtest-only field), which propagated through `SpellVessel.ResolveSpell` and caused "Spell did not complete" errors
+- Added null guards with logging across all Harmony patches (MyStats, AggroTable, NPCName) to prevent unhandled exceptions from propagating into game systems
+- `InRaid` check now uses reflection — works on playtest, safely skipped on retail
+
+### 0.2.0
+- Initial public release
+
 ## License
 
 [MIT](LICENSE)

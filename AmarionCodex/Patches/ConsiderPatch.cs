@@ -23,6 +23,11 @@ namespace AmarionCodex.Patches
             if (GameData.KnowledgeDatabase == null)
                 return;
 
+            if (string.IsNullOrEmpty(npc.NPCName))
+            {
+                UnityEngine.Debug.LogWarning("[AmarionCodex] ConsiderPatch: NPCName was null/empty");
+                return;
+            }
             string normalized = GameData.KnowledgeDatabase.Normalize(npc.NPCName);
             string currentZone = GameData.SceneName ?? "";
             EncounterTracker.Discover(normalized, currentZone);
