@@ -59,6 +59,9 @@ namespace AmarionCodex.UI
         private void OnDestroy()
         {
             EncounterTracker.OnNewDiscovery -= OnNpcDiscovered;
+
+            if (_itemOverlayRoot != null)
+                Destroy(_itemOverlayRoot);
         }
 
         /// <summary>
@@ -97,6 +100,9 @@ namespace AmarionCodex.UI
 
         public void Hide()
         {
+            if (GameData.ItemInfoWindow != null)
+                GameData.ItemInfoWindow.CloseItemWindow();
+            RestoreItemWindowParent();
             WindowPanel.SetActive(false);
         }
 
@@ -445,9 +451,35 @@ namespace AmarionCodex.UI
                         continue;
 
                     var col = (lootIdx % 2 == 0) ? leftCol : rightCol;
-                    CreateLabel(col.transform, "Loot_" + itemName,
-                        $"\u2022 {itemName}",
-                        CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal);
+                    var resolvedItem = ItemLookup.FindByName(itemName);
+
+                    if (resolvedItem != null)
+                    {
+                        // Clickable loot item — left-click opens the game's item info window
+                        var lootLabel = CreateLabel(col.transform, "Loot_" + itemName,
+                            $"\u2022 {itemName}",
+                            CodexStyles.DetailBodyFontSize, CodexStyles.LootLink, FontStyles.Normal);
+                        lootLabel.raycastTarget = true;
+
+                        var btn = lootLabel.gameObject.AddComponent<Button>();
+                        var btnColors = btn.colors;
+                        btnColors.normalColor = Color.white;
+                        btnColors.highlightedColor = new Color(1f, 1f, 0.7f, 1f);
+                        btnColors.pressedColor = new Color(1f, 1f, 0.5f, 1f);
+                        btnColors.selectedColor = Color.white;
+                        btn.colors = btnColors;
+
+                        Item capturedItem = resolvedItem; // capture for closure
+                        btn.onClick.AddListener(() => ShowItemInfo(capturedItem));
+                    }
+                    else
+                    {
+                        // Non-clickable loot item — name couldn't be resolved to a game Item
+                        CreateLabel(col.transform, "Loot_" + itemName,
+                            $"\u2022 {itemName}",
+                            CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal);
+                    }
+
                     lootIdx++;
                 }
             }
@@ -482,6 +514,110 @@ namespace AmarionCodex.UI
                 OnSearchChanged(SearchField.text);
             else if (_selectedZone != null)
                 SelectZone(_selectedZone);
+        }
+
+        private void Update()
+        {
+            if (!WindowPanel.activeSelf)
+                return;
+
+            // If the item info window is open, intercept Escape to close just the item window
+            if (_itemWindowReparented && GameData.ItemInfoWindow != null)
+            {
+                if (!GameData.ItemInfoWindow.isWindowActive())
+                {
+                    // Item window was closed by the game (e.g. clicking elsewhere)
+                    RestoreItemWindowParent();
+                }
+                else if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    // Close item window but keep the codex open
+                    GameData.ItemInfoWindow.CloseItemWindow();
+                    RestoreItemWindowParent();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Opens the game's native item info window for the given item.
+        /// Reparents the item window to a high-sortOrder overlay canvas
+        /// so it renders above the codex.
+        /// </summary>
+        private void ShowItemInfo(Item item)
+        {
+            if (GameData.ItemInfoWindow == null)
+                return;
+
+            GameData.ItemInfoWindow.CloseItemWindow();
+            ReparentItemWindowToOverlay();
+            GameData.ItemInfoWindow.DisplayItem(item, Input.mousePosition, 1);
+        }
+
+        private GameObject _itemOverlayRoot;
+        private Transform _itemWindowOriginalParent;
+        private bool _itemWindowReparented;
+
+        /// <summary>
+        /// Reparents just the ItemInfoWindow.ParentWindow onto a small overlay canvas
+        /// at sortingOrder 200 so it renders above the codex (100) without affecting
+        /// any other game UI elements.
+        /// </summary>
+        private void ReparentItemWindowToOverlay()
+        {
+            if (_itemWindowReparented)
+                return;
+
+            var parentWindow = GameData.ItemInfoWindow.ParentWindow;
+            if (parentWindow == null)
+                return;
+
+            // Create the overlay canvas on first use
+            if (_itemOverlayRoot == null)
+            {
+                _itemOverlayRoot = new GameObject("CodexItemOverlay");
+                Object.DontDestroyOnLoad(_itemOverlayRoot);
+
+                var overlayCanvas = _itemOverlayRoot.AddComponent<Canvas>();
+                overlayCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                overlayCanvas.sortingOrder = 200;
+
+                var scaler = _itemOverlayRoot.AddComponent<CanvasScaler>();
+                scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+                scaler.referenceResolution = new Vector2(1920, 1080);
+                scaler.matchWidthOrHeight = 0.5f;
+
+                _itemOverlayRoot.AddComponent<GraphicRaycaster>();
+            }
+
+            _itemWindowOriginalParent = parentWindow.transform.parent;
+            parentWindow.transform.SetParent(_itemOverlayRoot.transform, false);
+            _itemWindowReparented = true;
+
+            // Remove codex from UIWindows so game's Escape handler won't close it
+            // while the item info window is displayed
+            if (GameData.Misc != null && GameData.Misc.UIWindows != null)
+                GameData.Misc.UIWindows.Remove(WindowPanel);
+        }
+
+        /// <summary>
+        /// Returns the ItemInfoWindow.ParentWindow to its original parent canvas
+        /// and re-adds the codex to the game's UIWindows list.
+        /// </summary>
+        private void RestoreItemWindowParent()
+        {
+            if (!_itemWindowReparented)
+                return;
+
+            var parentWindow = GameData.ItemInfoWindow?.ParentWindow;
+            if (parentWindow != null && _itemWindowOriginalParent != null)
+                parentWindow.transform.SetParent(_itemWindowOriginalParent, false);
+
+            _itemWindowReparented = false;
+
+            // Re-add codex to UIWindows so Escape closes it normally again
+            if (GameData.Misc != null && GameData.Misc.UIWindows != null
+                && !GameData.Misc.UIWindows.Contains(WindowPanel))
+                GameData.Misc.UIWindows.Add(WindowPanel);
         }
 
         // ── Search ──

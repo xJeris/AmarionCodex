@@ -12,7 +12,7 @@ namespace AmarionCodex
     {
         public const string PluginGuid = "com.amarion.codex";
         public const string PluginName = "Amarion Codex";
-        public const string PluginVersion = "0.2.2";
+        public const string PluginVersion = "0.2.3";
 
         internal static Plugin Instance;
         internal static Harmony HarmonyInstance;
@@ -58,6 +58,9 @@ namespace AmarionCodex
 
             if (_codexWindow == null)
             {
+                // Initialize item lookup for clickable loot (needs GameData.ItemDB)
+                ItemLookup.Init();
+
                 _windowGO = CodexWindowBuilder.Build();
                 _codexWindow = _windowGO.GetComponent<CodexWindow>();
 

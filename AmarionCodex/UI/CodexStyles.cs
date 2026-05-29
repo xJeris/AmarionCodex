@@ -43,6 +43,9 @@ namespace AmarionCodex.UI
         public static readonly Color RowBorder       = new Color(0.55f, 0.43f, 0.27f, 0.12f);
         public static readonly Color DetailDivider   = new Color32(168, 144, 96, 255);
 
+        // ── Loot Links ──
+        public static readonly Color LootLink        = new Color32(70, 55, 30, 255);
+
         // ── Loot Tier Colors ──
         public static readonly Color TierCommon      = new Color32(107, 107, 79, 255);
         public static readonly Color TierUncommon    = new Color32(46, 107, 46, 255);

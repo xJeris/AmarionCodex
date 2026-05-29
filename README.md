@@ -11,6 +11,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 - Group and raid members trigger discoveries when NPCs aggro on them
 - Browse discovered entries organized by zone/dungeon with level ranges
 - View NPC details: level, loot tables, quest associations, kill count
+- **Clickable loot items** — click any drop to inspect full item stats via the game's item window
 - Undiscovered entries shown as `???` placeholders with discovery count per zone
 - Search across all discovered entries
 - Open with keybind (default: K) or chat commands (`/codex`, `/bestiary`)
@@ -71,6 +72,16 @@ Windows Defender may flag this DLL as a false positive. This is common for BepIn
 If flagged, add an exclusion for your `BepInEx/plugins/` folder in Windows Security settings.
 
 ## Changelog
+
+### 0.2.3
+- Clickable loot items — click any item in an NPC's drop list to open the game's native item inspection window with full stats, lore, and class requirements
+- Fixed typo in bestiary data: "Abominal Ribcage" → "Abominable Ribcage"
+
+### 0.2.2
+- Simplified quest display to a single deduplicated list
+- Renamed planar zones to match in-game display names
+- Fixed Mysterious Portals discovery by adding scene-to-zone mapping
+- Fixed NPC zone assignments and removed invalid entries
 
 ### 0.2.1
 - Fixed crash caused by `SimPlayer.InRaid` not existing in retail builds (playtest-only field), which propagated through `SpellVessel.ResolveSpell` and caused "Spell did not complete" errors
