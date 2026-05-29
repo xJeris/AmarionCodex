@@ -753,19 +753,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Azynthi Corruptor of Gods",
-          "normalizedName": "azynthi corruptor of gods",
-          "minLevel": 45,
-          "maxLevel": 45,
-          "isBoss": false,
-          "loot": [
-            "Stolen Memories"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -1216,17 +1203,6 @@
             "Hardened Copper Sword",
             "Water"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Constellation Bear",
-          "normalizedName": "constellation bear",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -2913,17 +2889,6 @@
           "minLevel": 31,
           "maxLevel": 31,
           "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Opus",
-          "normalizedName": "opus",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": true,
           "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -4630,17 +4595,6 @@
           "questItems": []
         },
         {
-          "name": "Bazxzoth",
-          "normalizedName": "bazxzoth",
-          "minLevel": 38,
-          "maxLevel": 38,
-          "isBoss": true,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
           "name": "Constructed Faithful",
           "normalizedName": "constructed faithful",
           "minLevel": 38,
@@ -5084,19 +5038,6 @@
             "Fury Helm",
             "Warded Brace",
             "Wardwarped Cape"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Planar Lord",
-          "normalizedName": "planar lord",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Mino Hatchet"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -5901,19 +5842,6 @@
             "Planar Stone Shards",
             "Ring of Echoes",
             "Small Cat Statue"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Azynthi, Corruptor of Gods",
-          "normalizedName": "azynthi corruptor of gods",
-          "minLevel": 45,
-          "maxLevel": 45,
-          "isBoss": false,
-          "loot": [
-            "Stolen Memories"
           ],
           "questsGiven": [],
           "questsTurnIn": [],
@@ -6925,6 +6853,52 @@
           "questItems": []
         },
         {
+          "name": "Constellation Bear",
+          "normalizedName": "constellation bear",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Constellation Nightmare",
+          "normalizedName": "constellation nightmare",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Constellation Snake",
+          "normalizedName": "constellation snake",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": true,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Constellation Wolf",
+          "normalizedName": "constellation wolf",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Echo of Grace",
           "normalizedName": "echo of grace",
           "minLevel": 42,
@@ -7033,6 +7007,17 @@
             "Skill Book: Celestial Smite III",
             "Spell Scroll: Solar Winds"
           ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Syzygy",
+          "normalizedName": "syzygy",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": true,
+          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -10727,99 +10712,6 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
-        },
-        {
-          "name": "Shadow of Brax",
-          "normalizedName": "shadow of brax",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Shadow of Fernalla",
-          "normalizedName": "shadow of fernalla",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Shadow of Soluna",
-          "normalizedName": "shadow of soluna",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Shadow of Vitheo",
-          "normalizedName": "shadow of vitheo",
-          "minLevel": 40,
-          "maxLevel": 40,
-          "isBoss": false,
-          "loot": [
-            "Ancient Bone",
-            "Water"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Constellation Snake",
-          "normalizedName": "constellation snake",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": true,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Constellation Wolf",
-          "normalizedName": "constellation wolf",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Wolf Meat"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Mutt",
-          "normalizedName": "mutt",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [
-            "Wolf Meat"
-          ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
         }
       ]
     },
@@ -13557,6 +13449,30 @@
           "questItems": []
         },
         {
+          "name": "Mutt",
+          "normalizedName": "mutt",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": false,
+          "loot": [
+            "Wolf Meat"
+          ],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
+          "name": "Opus",
+          "normalizedName": "opus",
+          "minLevel": 42,
+          "maxLevel": 42,
+          "isBoss": true,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "Tojokom",
           "normalizedName": "tojokom",
           "minLevel": 42,
@@ -13929,17 +13845,6 @@
             "Star Stone",
             "Tome of Necromancy"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Constellation Nightmare",
-          "normalizedName": "constellation nightmare",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -15097,17 +15002,6 @@
           "minLevel": 36,
           "maxLevel": 36,
           "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Syzygy",
-          "normalizedName": "syzygy",
-          "minLevel": 42,
-          "maxLevel": 42,
-          "isBoss": true,
           "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
