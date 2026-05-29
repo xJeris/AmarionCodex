@@ -268,25 +268,23 @@ namespace AmarionCodex.UI
             hl.childAlignment = TextAnchor.MiddleLeft;
             hl.childForceExpandWidth = false;
             hl.childForceExpandHeight = true;
-            hl.childControlWidth = false;
+            hl.childControlWidth = true;
 
-            // NPC name
-            string displayName = discovered ? bestiary.Name : "???";
+            // NPC name (with inline boss badge via rich text)
+            string displayName;
+            if (!discovered)
+                displayName = "???";
+            else if (bestiary.IsBoss)
+                displayName = $"{bestiary.Name}  <color=#8B2323><size={CodexStyles.BadgeFontSize}><b>BOSS</b></size></color>";
+            else
+                displayName = bestiary.Name;
             Color nameColor = discovered ? CodexStyles.InkDark : CodexStyles.Undiscovered;
             FontStyles nameStyle = discovered ? FontStyles.Normal : FontStyles.Italic;
             var nameText = CreateLabel(go.transform, "Name", displayName,
                 CodexStyles.EntryNameFontSize, nameColor, nameStyle);
+            nameText.richText = true;
             var nameLE = nameText.gameObject.AddComponent<LayoutElement>();
             nameLE.flexibleWidth = 1;
-
-            // Boss badge
-            if (discovered && bestiary.IsBoss)
-            {
-                var badge = CreateLabel(go.transform, "BossBadge", "BOSS",
-                    CodexStyles.BadgeFontSize, CodexStyles.InkRed, FontStyles.Bold);
-                var badgeLE = badge.gameObject.AddComponent<LayoutElement>();
-                badgeLE.preferredWidth = 36;
-            }
 
             // Level (range if multiple variants exist)
             string levelStr = discovered ? bestiary.LevelString : "Level ??";
@@ -296,6 +294,7 @@ namespace AmarionCodex.UI
             levelText.alignment = TextAlignmentOptions.MidlineRight;
             var levelLE = levelText.gameObject.AddComponent<LayoutElement>();
             levelLE.preferredWidth = 60;
+            levelLE.minWidth = 60;
 
             // Click handler
             BestiaryEntry be = bestiary; // capture
