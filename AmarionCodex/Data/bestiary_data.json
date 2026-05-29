@@ -6140,7 +6140,7 @@
       ]
     },
     {
-      "name": "Plane of Brax",
+      "name": "Brax's Plane of Elements",
       "levelRange": "35-42",
       "isDungeon": false,
       "npcs": [
@@ -6407,7 +6407,7 @@
       ]
     },
     {
-      "name": "Plane of Fernalla",
+      "name": "Plane of the Willow",
       "levelRange": "1-42",
       "isDungeon": false,
       "npcs": [
@@ -6781,7 +6781,7 @@
       ]
     },
     {
-      "name": "Plane of Soluna",
+      "name": "Soluna's Celestial Plane",
       "levelRange": "40-43",
       "isDungeon": false,
       "npcs": [
