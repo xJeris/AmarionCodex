@@ -4257,6 +4257,17 @@
           "questItems": []
         },
         {
+          "name": "A Restless Spirit",
+          "normalizedName": "a restless spirit",
+          "minLevel": 3,
+          "maxLevel": 3,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
+        },
+        {
           "name": "A Brown Bear Cub",
           "normalizedName": "a brown bear cub",
           "minLevel": 4,
@@ -4461,17 +4472,6 @@
             "Luminstone",
             "Sea Glass"
           ],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Phantom'S Ward",
-          "normalizedName": "phantoms ward",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [],
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
@@ -10218,6 +10218,17 @@
           "questsGiven": [],
           "questsTurnIn": [],
           "questItems": []
+        },
+        {
+          "name": "Undying Light",
+          "normalizedName": "undying light",
+          "minLevel": 25,
+          "maxLevel": 25,
+          "isBoss": false,
+          "loot": [],
+          "questsGiven": [],
+          "questsTurnIn": [],
+          "questItems": []
         }
       ]
     },
@@ -11801,17 +11812,6 @@
         {
           "name": "Sergeant D'Vinn",
           "normalizedName": "sergeant dvinn",
-          "minLevel": 25,
-          "maxLevel": 25,
-          "isBoss": false,
-          "loot": [],
-          "questsGiven": [],
-          "questsTurnIn": [],
-          "questItems": []
-        },
-        {
-          "name": "Undying Light",
-          "normalizedName": "undying light",
           "minLevel": 25,
           "maxLevel": 25,
           "isBoss": false,
