@@ -29,14 +29,8 @@ namespace AmarionCodex.Data
         /// <summary>Loot drop names.</summary>
         public List<string> Loot;
 
-        /// <summary>Quest names this NPC gives.</summary>
-        public List<string> QuestsGiven;
-
-        /// <summary>Quest names this NPC accepts turn-ins for.</summary>
-        public List<string> QuestsTurnIn;
-
-        /// <summary>Quest item names this NPC gives.</summary>
-        public List<string> QuestItems;
+        /// <summary>All quest names this NPC is associated with (deduplicated).</summary>
+        public List<string> Quests;
 
         /// <summary>
         /// Returns a display string for the level: "Level 5" or "Level 5-10".
@@ -60,9 +54,14 @@ namespace AmarionCodex.Data
             IsBoss = npc.isBoss;
             ZoneName = zoneName;
             Loot = npc.loot ?? new List<string>();
-            QuestsGiven = npc.questsGiven ?? new List<string>();
-            QuestsTurnIn = npc.questsTurnIn ?? new List<string>();
-            QuestItems = npc.questItems ?? new List<string>();
+            var questSet = new HashSet<string>();
+            if (npc.questsGiven != null)
+                foreach (var q in npc.questsGiven) if (!string.IsNullOrEmpty(q)) questSet.Add(q);
+            if (npc.questsTurnIn != null)
+                foreach (var q in npc.questsTurnIn) if (!string.IsNullOrEmpty(q)) questSet.Add(q);
+            if (npc.questItems != null)
+                foreach (var q in npc.questItems) if (!string.IsNullOrEmpty(q)) questSet.Add(q);
+            Quests = new List<string>(questSet);
         }
     }
 }

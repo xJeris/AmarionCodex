@@ -453,13 +453,7 @@ namespace AmarionCodex.UI
             }
 
             // ── Quest Section ──
-            bool hasQuests = false;
-            if (bestiary.QuestsTurnIn != null && bestiary.QuestsTurnIn.Count > 0)
-                hasQuests = true;
-            if (bestiary.QuestsGiven != null && bestiary.QuestsGiven.Count > 0)
-                hasQuests = true;
-
-            if (hasQuests)
+            if (bestiary.Quests != null && bestiary.Quests.Count > 0)
             {
                 AddSpacer(padding.transform, 6);
                 AddDivider(padding.transform);
@@ -468,46 +462,11 @@ namespace AmarionCodex.UI
                 CreateLabel(padding.transform, "QuestHeader", "Quests",
                     CodexStyles.DetailSectionFontSize, CodexStyles.TitleBarTop, FontStyles.Normal);
 
-                if (bestiary.QuestsTurnIn != null)
+                foreach (var questName in bestiary.Quests)
                 {
-                    foreach (var questName in bestiary.QuestsTurnIn)
-                    {
-                        if (string.IsNullOrEmpty(questName)) continue;
-                        CreateLabel(padding.transform, "QuestTurnIn_" + questName,
-                            $"  \u276F {questName} <color=#78593A><size=11><i>(turn-in)</i></size></color>",
-                            CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal)
-                            .richText = true;
-                    }
-                }
-
-                if (bestiary.QuestsGiven != null)
-                {
-                    foreach (var questName in bestiary.QuestsGiven)
-                    {
-                        if (string.IsNullOrEmpty(questName)) continue;
-                        CreateLabel(padding.transform, "QuestGiven_" + questName,
-                            $"  \u276F {questName} <color=#78593A><size=11><i>(given by)</i></size></color>",
-                            CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal)
-                            .richText = true;
-                    }
-                }
-            }
-
-            // ── Quest Items Section ──
-            if (bestiary.QuestItems != null && bestiary.QuestItems.Count > 0)
-            {
-                AddSpacer(padding.transform, 6);
-                AddDivider(padding.transform);
-                AddSpacer(padding.transform, 4);
-
-                CreateLabel(padding.transform, "QuestItemHeader", "Quest Items",
-                    CodexStyles.DetailSectionFontSize, CodexStyles.TitleBarTop, FontStyles.Normal);
-
-                foreach (var itemName in bestiary.QuestItems)
-                {
-                    if (string.IsNullOrEmpty(itemName)) continue;
-                    CreateLabel(padding.transform, "QuestItem_" + itemName,
-                        $"  \u2022 {itemName}",
+                    if (string.IsNullOrEmpty(questName)) continue;
+                    CreateLabel(padding.transform, "Quest_" + questName,
+                        $"\u2022 {questName}",
                         CodexStyles.DetailBodyFontSize, CodexStyles.InkDark, FontStyles.Normal);
                 }
             }
