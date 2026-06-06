@@ -260,6 +260,17 @@ namespace AmarionCodex.Data
             _loadedSlot = -1;
         }
 
+        /// <summary>
+        /// Resets all static state for hot-reload safety.
+        /// </summary>
+        public static void Reset()
+        {
+            _discovered.Clear();
+            _killCounts.Clear();
+            _loadedSlot = -1;
+            OnNewDiscovery = null;
+        }
+
         private static string GetSavePath(int slotIndex)
         {
             // Game saves to: Application.persistentDataPath + "/ESSaveData/"

@@ -243,13 +243,13 @@ namespace AmarionCodex.UI
             statusHL.childForceExpandHeight = true;
 
             var statusLeft = CreateTMPText(statusBar.transform, "StatusLeft",
-                $"{Plugin.Cfg.OpenCodexKey.Value} to close \u00B7 /codex in chat",
+                $"{PluginCore.Instance.OpenCodexKey} to close \u00B7 /codex in chat",
                 CodexStyles.StatusFontSize, CodexStyles.StatusText);
             var statusLeftLE = statusLeft.gameObject.AddComponent<LayoutElement>();
             statusLeftLE.flexibleWidth = 1;
 
             var statusRight = CreateTMPText(statusBar.transform, "StatusRight",
-                $"Amarion Codex v{Plugin.PluginVersion}",
+                $"Amarion Codex v{PluginCore.PluginVersion}",
                 CodexStyles.StatusFontSize, CodexStyles.StatusText);
             statusRight.alignment = TextAlignmentOptions.MidlineRight;
 

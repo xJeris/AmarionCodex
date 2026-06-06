@@ -23,9 +23,9 @@ namespace AmarionCodex.Patches
 
             string text = typedField.text.ToLower().Trim();
 
-            if (text == "/codex" || text == "/bestiary" || text == Plugin.Cfg.ChatCommand.Value.ToLower())
+            if (text == "/codex" || text == "/bestiary" || text == PluginCore.Instance.ChatCommand.ToLower())
             {
-                Plugin.Instance.ToggleCodexWindow();
+                PluginCore.Instance.ToggleCodexWindow();
                 return false; // skip original CheckCommands — CheckInput handles cleanup
             }
 

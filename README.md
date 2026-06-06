@@ -21,9 +21,18 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 ## Requirements
 
 - [Erenshor](https://store.steampowered.com/app/2382520/Erenshor/) (or Erenshor Playtest)
-- [BepInEx 5.4.x](https://github.com/BepInEx/BepInEx/releases) installed into your Erenshor directory
+- **One** of:
+  - [BepInEx 5.4.x](https://github.com/BepInEx/BepInEx/releases) installed into your Erenshor directory
+  - [Lunaris Mod Manager](https://github.com/MizukiBelhi/Lunaris) (includes its own loader)
 
 ## Installation
+
+### Via Lunaris Mod Manager (recommended)
+
+1. Install from the Lunaris Vault (search "Amarion Codex"), or
+2. Download `AmarionCodex.dll` and place it in `<Erenshor>/plugins/AmarionCodex/`
+
+### Via BepInEx
 
 1. Install BepInEx 5.4.x into your Erenshor game directory if you haven't already
 2. Download `AmarionCodex.dll` from the [Releases](../../releases) page
@@ -34,8 +43,10 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 
 ### Prerequisites
 
-- [.NET SDK](https://dotnet.microsoft.com/download) (with .NET Framework 4.7.2 targeting pack)
+- [.NET SDK](https://dotnet.microsoft.com/download) (with .NET Framework 4.8 targeting pack)
 - Erenshor installed (the build references game DLLs directly)
+
+> **Note:** Both mod loader entry points are compiled into a single DLL, so `Lunaris.dll` must be present in the game directory at build time even if you only use BepInEx. Lunaris is auto-downloaded when the game launches — run the game once to obtain it.
 
 ### Build
 
@@ -52,9 +63,9 @@ set ERENSHOR_DIR=C:\path\to\Erenshor
 dotnet build AmarionCodex/AmarionCodex.csproj
 ```
 
-The build defaults to Release configuration. Output goes to `AmarionCodex/bin/Release/net472/AmarionCodex.dll`.
+The build defaults to Release configuration. Output goes to `AmarionCodex/bin/Release/net48/AmarionCodex.dll`.
 
-If Erenshor is detected, the DLL is also auto-deployed to `<Erenshor>/BepInEx/plugins/AmarionCodex/`.
+If Erenshor is detected, the DLL is auto-deployed to both `<Erenshor>/BepInEx/plugins/AmarionCodex/` and `<Erenshor>/plugins/AmarionCodex/` (Lunaris).
 
 ### Auto-detection paths
 
@@ -72,6 +83,11 @@ Windows Defender may flag this DLL as a false positive. This is common for BepIn
 If flagged, add an exclusion for your `BepInEx/plugins/` folder in Windows Security settings.
 
 ## Changelog
+
+### 0.3.0
+- Added Lunaris Mod Manager compatibility — single DLL works with both BepInEx and Lunaris
+- Hot-reload safe: clean unload/reload via Lunaris without stale state
+- Target framework updated to .NET 4.8
 
 ### 0.2.3
 - Clickable loot items — click any item in an NPC's drop list to open the game's native item inspection window with full stats, lore, and class requirements

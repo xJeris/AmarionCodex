@@ -46,6 +46,15 @@ namespace AmarionCodex.Data
         }
 
         /// <summary>
+        /// Resets all static state for hot-reload safety.
+        /// </summary>
+        public static void Reset()
+        {
+            _itemsByName = null;
+            _initialized = false;
+        }
+
+        /// <summary>
         /// Finds an Item by its display name. Returns null if not found or not initialized.
         /// </summary>
         public static Item FindByName(string itemName)

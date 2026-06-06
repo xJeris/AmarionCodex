@@ -208,6 +208,20 @@ namespace AmarionCodex.Data
             return result;
         }
 
+        /// <summary>
+        /// Resets all static state for hot-reload safety.
+        /// </summary>
+        public static void Reset()
+        {
+            _data = null;
+            _zoneIndex = null;
+            _displayNameIndex = null;
+            _sceneToZone = null;
+            _sortedZoneNames = null;
+            _discoveryZoneOverrides = null;
+            _loaded = false;
+        }
+
         // ── Public API ──
 
         public static bool IsLoaded => _loaded;
