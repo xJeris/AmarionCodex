@@ -25,7 +25,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 
 ## Installation
 
-1. Install from the Lunaris Vault (search "Amarion Codex"), or
+1. Install from the [Erenshor Vault](https://erenshorvault.app/) (search "Amarion Codex"), or
 2. Download `AmarionCodex.dll` and place it in `<Erenshor>/plugins/AmarionCodex/`
 
 ## Building from Source
