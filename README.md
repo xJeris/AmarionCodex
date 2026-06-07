@@ -6,7 +6,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 
 ## Features
 
-- **905 NPCs** across **45 zones** with loot tables, quest associations, and level data
+- **947 NPCs** across **44 zones** with loot tables, quest associations, and level data
 - Discover NPCs through combat (aggro), hailing, considering, or killing
 - Group and raid members trigger discoveries when NPCs aggro on them
 - Browse discovered entries organized by zone/dungeon with level ranges
@@ -21,23 +21,12 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 ## Requirements
 
 - [Erenshor](https://store.steampowered.com/app/2382520/Erenshor/) (or Erenshor Playtest)
-- **One** of:
-  - [BepInEx 5.4.x](https://github.com/BepInEx/BepInEx/releases) installed into your Erenshor directory
-  - [Lunaris Mod Manager](https://github.com/MizukiBelhi/Lunaris) (includes its own loader)
+- [Lunaris Mod Manager](https://github.com/MizukiBelhi/Lunaris/releases)
 
 ## Installation
 
-### Via Lunaris Mod Manager (recommended)
-
 1. Install from the Lunaris Vault (search "Amarion Codex"), or
 2. Download `AmarionCodex.dll` and place it in `<Erenshor>/plugins/AmarionCodex/`
-
-### Via BepInEx
-
-1. Install BepInEx 5.4.x into your Erenshor game directory if you haven't already
-2. Download `AmarionCodex.dll` from the [Releases](../../releases) page
-3. Copy the file to `<Erenshor>/BepInEx/plugins/AmarionCodex/`
-4. Launch the game
 
 ## Building from Source
 
@@ -46,7 +35,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 - [.NET SDK](https://dotnet.microsoft.com/download) (with .NET Framework 4.8 targeting pack)
 - Erenshor installed (the build references game DLLs directly)
 
-> **Note:** Both mod loader entry points are compiled into a single DLL, so `Lunaris.dll` must be present in the game directory at build time even if you only use BepInEx. Lunaris is auto-downloaded when the game launches — run the game once to obtain it.
+> **Note:** `Lunaris.dll` must be present in the game directory at build time. Lunaris is auto-downloaded when the game launches — run the game once to obtain it.
 
 ### Build
 
@@ -65,7 +54,7 @@ dotnet build AmarionCodex/AmarionCodex.csproj
 
 The build defaults to Release configuration. Output goes to `AmarionCodex/bin/Release/net48/AmarionCodex.dll`.
 
-If Erenshor is detected, the DLL is auto-deployed to both `<Erenshor>/BepInEx/plugins/AmarionCodex/` and `<Erenshor>/plugins/AmarionCodex/` (Lunaris).
+If Erenshor is detected, the DLL is auto-deployed to `<Erenshor>/plugins/AmarionCodex/`.
 
 ### Auto-detection paths
 
@@ -78,15 +67,20 @@ The build checks these locations in order:
 
 ## Antivirus Note
 
-Windows Defender may flag this DLL as a false positive. This is common for BepInEx/Harmony mods because runtime method patching uses techniques that resemble code injection to heuristic scanners. The mod contains no malicious code — you can review the full source in the `AmarionCodex/` directory.
+Windows Defender may flag this DLL as a false positive. This is common for Harmony mods because runtime method patching uses techniques that resemble code injection to heuristic scanners. The mod contains no malicious code — you can review the full source in the `AmarionCodex/` directory.
 
-If flagged, add an exclusion for your `BepInEx/plugins/` folder in Windows Security settings.
+If flagged, add an exclusion for your `plugins/` folder in Windows Security settings.
 
 ## Changelog
 
-### 0.3.0
-- Added Lunaris Mod Manager compatibility — single DLL works with both BepInEx and Lunaris
+### 0.3.2
+- Migrated fully to Lunaris Mod Manager (BepInEx support removed)
+- Lunaris attribute-decorated config (OpenCodexKey, ChatCommand)
+- Fixed ZoneEntryPatch passing scene name instead of zone name for Reliquary Hall
 - Hot-reload safe: clean unload/reload via Lunaris without stale state
+
+### 0.3.0
+- Added Lunaris Mod Manager compatibility
 - Target framework updated to .NET 4.8
 
 ### 0.2.3
