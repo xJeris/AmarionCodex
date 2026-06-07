@@ -21,8 +21,8 @@ namespace AmarionCodex.Patches
             string zone = BestiaryDatabase.ResolveSceneToZone(scene);
             if (zone == "Reliquary Hall")
             {
-                EncounterTracker.Discover("reliquary ward", scene);
-                EncounterTracker.Discover("reliquary fiend", scene);
+                EncounterTracker.Discover("reliquary ward", zone);
+                EncounterTracker.Discover("reliquary fiend", zone);
             }
         }
     }

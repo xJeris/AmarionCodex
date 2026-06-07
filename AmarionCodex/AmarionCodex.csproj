@@ -2,11 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <AssemblyName>AmarionCodex</AssemblyName>
-    <Version>0.3.0</Version>
+    <Version>0.3.2</Version>
     <LangVersion>9.0</LangVersion>
     <Deterministic>false</Deterministic>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>AmarionCodex.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -19,11 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- BepInEx 5.4.x -->
-    <Reference Include="BepInEx">
-      <HintPath>$(ErenshorDir)\BepInEx\core\BepInEx.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
+    <!-- Harmony (bundled with Lunaris at runtime) -->
     <Reference Include="0Harmony">
       <HintPath>$(ErenshorDir)\BepInEx\core\0Harmony.dll</HintPath>
       <Private>false</Private>
@@ -88,17 +82,7 @@
     <EmbeddedResource Include="Data\bestiary_data.json" LogicalName="AmarionCodex.bestiary_data.json" />
   </ItemGroup>
 
-  <!-- Auto-deploy to BepInEx/plugins/AmarionCodex/ on build -->
-  <Target Name="DeployPlugin" AfterTargets="Build" Condition="'$(ErenshorDir)' != ''">
-    <PropertyGroup>
-      <PluginDir>$(ErenshorDir)\BepInEx\plugins\AmarionCodex</PluginDir>
-    </PropertyGroup>
-    <MakeDir Directories="$(PluginDir)" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PluginDir)" />
-    <Copy SourceFiles="$(TargetDir)bestiary_data.json" DestinationFolder="$(PluginDir)" />
-  </Target>
-
-  <!-- Also deploy to Lunaris plugins/ folder -->
+  <!-- Deploy to Lunaris plugins/ folder -->
   <Target Name="DeployLunaris" AfterTargets="Build" Condition="'$(ErenshorDir)' != '' AND Exists('$(ErenshorDir)\Lunaris.dll')">
     <PropertyGroup>
       <LunarisDir>$(ErenshorDir)\plugins\AmarionCodex</LunarisDir>

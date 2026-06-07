@@ -6,13 +6,13 @@ using UnityEngine;
 namespace AmarionCodex
 {
     /// <summary>
-    /// Loader-agnostic core logic shared by both BepInEx and Lunaris entry points.
+    /// Core plugin logic. LunarisEntry delegates to this class.
     /// </summary>
     internal class PluginCore
     {
         public const string PluginGuid = "com.amarion.codex";
         public const string PluginName = "Amarion Codex";
-        public const string PluginVersion = "0.3.0";
+        public const string PluginVersion = "0.3.2";
 
         internal static PluginCore Instance;
 

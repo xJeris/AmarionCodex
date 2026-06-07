@@ -289,15 +289,25 @@ namespace AmarionCodex.Data
         public static List<BestiaryEntry> GetEntriesForZone(string zoneName)
         {
             var result = new List<BestiaryEntry>();
-            if (!_loaded || !_zoneIndex.TryGetValue(zoneName, out var zone))
-                return result;
-
-            foreach (var npc in zone.npcs)
+            try
             {
-                result.Add(new BestiaryEntry(npc, zoneName));
-            }
+                if (!_loaded || string.IsNullOrEmpty(zoneName))
+                    return result;
 
-            result.Sort((a, b) => a.MinLevel.CompareTo(b.MinLevel));
+                if (!_zoneIndex.TryGetValue(zoneName, out var zone))
+                    return result;
+
+                foreach (var npc in zone.npcs)
+                {
+                    result.Add(new BestiaryEntry(npc, zoneName));
+                }
+
+                result.Sort((a, b) => a.MinLevel.CompareTo(b.MinLevel));
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"[AmarionCodex] GetEntriesForZone failed for '{zoneName}': {ex.GetType().Name}: {ex.Message}\n{ex.StackTrace}");
+            }
             return result;
         }
 

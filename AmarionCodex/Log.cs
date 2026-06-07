@@ -3,10 +3,9 @@ using System;
 namespace AmarionCodex
 {
     /// <summary>
-    /// Loader-agnostic logging abstraction. Each entry point (BepInEx Plugin
-    /// or Lunaris LunarisEntry) wires these delegates to its own logging API
-    /// during Awake(). All shared code uses these instead of referencing
-    /// BepInEx.Logging or Lunaris.Logging directly.
+    /// Logging abstraction. LunarisEntry wires these delegates to
+    /// Lunaris.Logging during Awake(). All shared code uses these
+    /// instead of referencing Lunaris.Logging directly.
     /// </summary>
     public static class Log
     {

@@ -26,8 +26,6 @@ namespace AmarionCodex.UI
 
         // ── State ──
         private string _selectedZone;
-        private BestiaryEntry _selectedEntry;
-        private bool _isDetailView;
         private List<string> _zones = new List<string>();
         private List<GameObject> _zoneButtons = new List<GameObject>();
         private List<GameObject> _entryRows = new List<GameObject>();
@@ -36,7 +34,7 @@ namespace AmarionCodex.UI
 
         /// <summary>
         /// True when the search input field has focus (user is typing in it).
-        /// Used by Plugin.Update() to suppress the toggle keybind.
+        /// Used by PluginCore.OnUpdate() to suppress the toggle keybind.
         /// </summary>
         public bool IsSearchFocused =>
             SearchField != null && SearchField.isFocused;
@@ -207,7 +205,6 @@ namespace AmarionCodex.UI
         public void SelectZone(string zoneName)
         {
             _selectedZone = zoneName;
-            _isDetailView = false;
             _isSearchMode = false;
             DetailView.SetActive(false);
 
@@ -314,8 +311,6 @@ namespace AmarionCodex.UI
 
         private void OnEntryClicked(BestiaryEntry bestiary, bool discovered)
         {
-            _selectedEntry = bestiary;
-            _isDetailView = true;
             ShowDetailView(bestiary, discovered);
         }
 
@@ -505,8 +500,6 @@ namespace AmarionCodex.UI
 
         private void BackToList()
         {
-            _isDetailView = false;
-            _selectedEntry = null;
             DetailView.SetActive(false);
 
             if (_isSearchMode)
@@ -633,7 +626,6 @@ namespace AmarionCodex.UI
             }
 
             _isSearchMode = true;
-            _isDetailView = false;
             DetailView.SetActive(false);
 
             ZoneNameText.text = "Search Results";

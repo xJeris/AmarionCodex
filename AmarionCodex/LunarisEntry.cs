@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Reflection;
 using UnityEngine;
@@ -9,8 +10,10 @@ namespace AmarionCodex
 {
     [LunarisPlugin("Amarion Codex", PluginCore.PluginVersion, "Amarion",
         "In-game bestiary and NPC knowledge database")]
-    public class LunarisEntry : Lunaris.LunarisPlugin
+    public class LunarisEntry : LunarisPlugin
     {
+        public static LunarisConfig Settings { get; private set; }
+
         private PluginCore _core;
 
         private void Awake()
@@ -20,20 +23,25 @@ namespace AmarionCodex
             Log.Warning = s => Logging.LogWarning(s);
             Log.Error = s => Logging.LogError(s);
 
-            // Read config via Lunaris API
-            var openKey = Config.Read("OpenCodexKey", KeyCode.K);
-            var chatCommand = Config.Read("ChatCommand", "/codex");
+            // Register configuration via Lunaris
+            Settings = Config.Register<LunarisConfig>().Get();
 
             _core = new PluginCore
             {
-                OpenCodexKey = openKey,
-                ChatCommand = chatCommand
+                OpenCodexKey = ParseKeyCode(Settings.OpenCodexKey),
+                ChatCommand = Settings.ChatCommand
             };
 
             // Lunaris plugins live in <GameDir>/plugins/
             string pluginDir = Path.GetDirectoryName(
                 Assembly.GetExecutingAssembly().Location);
             _core.Initialize(pluginDir);
+        }
+
+        private static KeyCode ParseKeyCode(string name)
+        {
+            try { return (KeyCode)Enum.Parse(typeof(KeyCode), name, true); }
+            catch { return KeyCode.K; }
         }
 
         private void Update() => _core?.OnUpdate();

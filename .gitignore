@@ -25,5 +25,5 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# BepInEx runtime
-BepInEx/
+# Claude Code
+.claude/
