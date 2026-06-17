@@ -12,7 +12,7 @@ namespace AmarionCodex
     {
         public const string PluginGuid = "com.amarion.codex";
         public const string PluginName = "Amarion Codex";
-        public const string PluginVersion = "0.3.2";
+        public const string PluginVersion = "0.3.3";
 
         internal static PluginCore Instance;
 

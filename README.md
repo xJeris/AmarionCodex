@@ -6,7 +6,7 @@ An in-game bestiary/knowledge database mod for [Erenshor](https://store.steampow
 
 ## Features
 
-- **947 NPCs** across **44 zones** with loot tables, quest associations, and level data
+- **916 NPCs** across **45 zones** with loot tables, quest associations, and level data
 - Discover NPCs through combat (aggro), hailing, considering, or killing
 - Group and raid members trigger discoveries when NPCs aggro on them
 - Browse discovered entries organized by zone/dungeon with level ranges
@@ -72,6 +72,14 @@ Windows Defender may flag this DLL as a false positive. This is common for Harmo
 If flagged, add an exclusion for your `plugins/` folder in Windows Security settings.
 
 ## Changelog
+
+### 0.3.3
+- Updated bestiary data: 45 zones, 916 NPCs, 833 unique names, 644 with loot
+- Added new planar zone NPCs and boss loot (Brax, Fernalla, Soluna, Vitheo planes)
+- Added Vithean Chest loot attribution to Vitheo plane bosses
+- Corrected boss flags for fight adds (Constellation Snake, Syzygy, Chosen Fawn, Lava Fiend)
+- Moved Fernalla Goddess of Nature to Plane of the Willow
+- Added 17 new loot items including spell scrolls and skill books
 
 ### 0.3.2
 - Migrated fully to Lunaris Mod Manager (BepInEx support removed)
